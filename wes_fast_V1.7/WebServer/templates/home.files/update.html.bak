@@ -1,0 +1,5 @@
+<form action="/update/" enctype="multipart/form-data" method="post">
+<input type="file" name = "picfile">
+       <button value="submit" type="submit">submit</button>
+       <img src="/site_media/{{msg.imageurl}}"</img>
+</form>

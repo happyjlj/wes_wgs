@@ -1,0 +1,376 @@
+﻿{% load static %}
+<!--DOCTYPE html-->
+<html>
+<!--所有的网页都会去套这个模板的-->
+
+<!--模板的头-->
+  <head>
+    <title>次级页面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+<!--图标网页-->
+    <!--link rel="shortcut icon" href="{% static 'images/minus.png' %}"-->
+<!--头样式CSS-->
+    <!--link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"-->
+
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>a{TEXT-DECORATION:none}</style>
+</head>
+
+<!--模板的体-->
+<body style="background-color:#ffffff;">
+
+<div id="container-fluid" style="display:inline;background-color:#FFFFFF;">
+
+
+        <!--搜索结果展示-->
+        <div  style="margin:20px 20px 20px 20px;background-color:#FFFFFF;border-radius: 4px;min-height:100px;text-align:center">
+            <div style="padding:20px;">
+
+                      {% if indexType == 'qc' %}
+                        <table class="table table-bordered table-hover">
+                        <caption>质控指标</caption>
+                        <thead>
+                            <tr>
+                              <th>serial_no</th>
+                              <th>lib_type</th>
+                              <th>project_code</th>
+                              <th>clean_per</th>
+                              <th>clean_reads</th>
+                              <th>clean_bases</th>
+                              <th>cleanq20</th>
+                              <th>cleanq30</th>
+                              <th>clean_n</th>
+                              <th>clean_gc</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.qc %}{{i.serial_no}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.lib_type}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.project_code}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.clean_per}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.clean_reads}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.clean_bases}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.cleanq20}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.cleanq30}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.clean_n}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.clean_gc}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+
+
+                             <tr>
+                              <th>raw_gc</th>
+                              <th>read_length</th>
+                              <th>adapter</th>
+                              <th>pool_lib_data</th>
+                              <th>mapped</th>
+                              <th>paired</th>
+                              <th>insert</th>
+                              <th>sd</th>
+                              <th>duplication</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.qc %}{{i.raw_gc}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.read_length}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.adapter}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.pool_lib_data}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.mapped}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.paired}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.insert}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.sd}}{% endfor %}</td>
+                                <td>{% for i in m.qc %}{{i.duplication}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          </tbody>
+                      </table>
+                      {% endif %}
+
+                      {% if indexType == 'algin' %}
+                      <table class="table table-bordered table-hover">
+                        <caption>比对指标</caption>
+                        <thead>
+                            <tr>
+                              <th>clean_reads</th>
+                              <th>mapped_reads</th>
+                              <th>duplicate_reads</th>
+                              <th>unique_reads</th>
+                              <th>reads_unique_target</th>
+                              <th>reads_unique_genome</th>
+                              <th>total_baseson_target</th>
+                              <th>total_basesnear_target</th>
+                              <th>total_seqon_target</th>
+                              <th>total_seqnear_target</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.algin %}{{i.clean_reads}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.mapped_reads}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.duplicate_reads}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.unique_reads}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.reads_unique_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.reads_unique_genome}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.total_baseson_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.total_basesnear_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.total_seqon_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.total_seqnear_target}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+
+                          <thead>
+                            <tr>
+                              <th>total_effective_yield</th>
+                              <th>feb_on_target</th>
+                              <th>feb_onnear_target</th>
+                              <th>fraction_unique_target</th>
+                              <th>avg_seqdepthon_target</th>
+                              <th>avg_seqdepthnear_target</th>
+                              <th>avg_insert_size</th>
+                              <th>base_coveredon_target</th>
+                              <th>coverage_target_region</th>
+                              <th>base_coverednear_target</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.algin %}{{i.total_effective_yield}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.feb_on_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.feb_onnear_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.fraction_unique_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.avg_seqdepthon_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.avg_seqdepthnear_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.avg_insert_size}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.base_coveredon_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.coverage_target_region}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.base_coverednear_target}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+
+                          <thead>
+                            <tr>
+                              <th>coverage_near_target</th>
+                              <th>mismatch_in_target</th>
+                              <th>mismatch_in_total</th>
+                              <th>fraction_coveredt_4x</th>
+                              <th>fraction_covered_10x</th>
+                              <th>fraction_covered_20x</th>
+                              <th>fraction_covered_50x</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.algin %}{{i.coverage_near_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.mismatch_in_target}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.mismatch_in_total}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.fraction_coveredt_4x}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.fraction_covered_10x}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.fraction_covered_20x}}{% endfor %}</td>
+                                <td>{% for i in m.algin %}{{i.fraction_covered_50x}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                      {% endif %}
+
+                      {% if indexType == 'snp_indel' %}
+                      <table class="table table-bordered table-hover">
+                        <caption>变异指标 SNP</caption>
+                        <thead>
+                            <tr>
+                              <th>total_snp</th>
+                              <th>genome1000_and_dbsnp150</th>
+                              <th>genome1000_only</th>
+                              <th>dbsnp150_only</th>
+                              <th>novel</th>
+                              <th>het</th>
+                              <th>homo</th>
+                              <th>synonymous_snv</th>
+                              <th>nonsynonymous_snv</th>
+                              <th>exonic</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.snp %}{{i.total_snp}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.genome1000_and_dbsnp150}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.genome1000_only}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.dbsnp150_only}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.novel}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.het}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.homo}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.synonymous_snv}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.nonsynonymous_snv}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.exonic}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          <thead>
+                            <tr>
+                              <th>intergenic</th>
+                              <th>intronic</th>
+                              <th>splicing_predicted</th>
+                              <th>utr3</th>
+                              <th>utr5</th>
+                              <th>utr5_utr3</th>
+                              <th>downstream</th>
+                              <th>exonic_splicing</th>
+                              <th>ncrna_exonic</th>
+                              <th>ncrna_exonic_splicing</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.snp %}{{i.intergenic}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.intronic}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.splicing_predicted}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.utr3}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.utr5}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.utr5_utr3}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.downstream}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.exonic_splicing}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.ncrna_exonic}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.ncrna_exonic_splicing}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          <thead>
+                            <tr>
+                              <th>ncrna_intronic</th>
+                              <th>ncrna_splicing</th>
+                              <th>splicing</th>
+                              <th>stopgain</th>
+                              <th>stoploss</th>
+                              <th>unknown_info</th>
+                              <th>upstream</th>
+                              <th>upstream_downstream</th>
+                              <th>ti_tv</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.snp %}{{i.ncrna_intronic}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.ncrna_splicing}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.splicing}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.stopgain}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.stoploss}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.unknown_info}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.upstream}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.upstream_downstream}}{% endfor %}</td>
+                                <td>{% for i in m.snp %}{{i.ti_tv}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          </tbody>
+                          </table>
+                          <table class="table table-bordered table-hover">
+                          <caption>变异指标 INDEL</caption>
+                        <thead>
+                            <tr>
+                              <th>total_indel</th>
+                              <th>genome1000_and_dbsnp150</th>
+                              <th>dbsnp150_only</th>
+                              <th>novel</th>
+                              <th>het</th>
+                              <th>homo</th>
+                              <th>exonic</th>
+                              <th>intergenic</th>
+                              <th>intronic</th>
+                              <th>utr3</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.indel %}{{i.total_indel}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.genome1000_and_dbsnp150}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.dbsnp150_only}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.novel}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.het}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.homo}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.exonic}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.intergenic}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.intronic}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.utr3}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          <thead>
+                            <tr>
+                              <th>utr5</th>
+                              <th>utr5_utr3</th>
+                              <th>downstream</th>
+                              <th>exonic_splicing</th>
+                              <th>frameshift_deletion</th>
+                              <th>frameshift_insertion</th>
+                              <th>ncrna_exonic</th>
+                              <th>ncrna_exonic_splicing</th>
+                              <th>ncrna_intronic</th>
+                              <th>nonframeshift_deletion</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.indel %}{{i.utr5}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.utr5_utr3}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.downstream}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.exonic_splicing}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.frameshift_deletion}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.frameshift_insertion}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.ncrna_exonic}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.ncrna_exonic_splicing}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.ncrna_intronic}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.nonframeshift_deletion}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+                          <thead>
+                            <tr>
+                              <th>nonframeshift_insertion</th>
+                              <th>splicing</th>
+                              <th>stopgain</th>
+                              <th>stoploss</th>
+                              <th>unknown_info</th>
+                              <th>upstream</th>
+                              <th>upstream_downstream</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                          {% for m in DB_data %}
+                             <tr>
+                                <td>{% for i in m.indel %}{{i.nonframeshift_insertion}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.splicing}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.stopgain}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.stoploss}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.unknown_info}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.upstream}}{% endfor %}</td>
+                                <td>{% for i in m.indel %}{{i.upstream_downstream}}{% endfor %}</td>
+                             </tr>
+                          {% endfor %}
+
+
+                    </tbody>
+
+                </table>
+                      {% endif %}
+                  
+                  
+            </div>
+        </div>
+
+</div>
+
+<!--JS文件-->
+    <!--script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script-->
+  </body>
+</html>

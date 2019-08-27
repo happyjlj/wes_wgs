@@ -1,0 +1,194 @@
+﻿{% extends "base.html" %}
+<!--下面这句应该是引用静态文件-->
+{% load static %}
+<!--下面这句应该是与模板的block content匹配起来使用，下面应该是正文-->
+
+
+{% block content %}
+{% if count == '0' %}
+{% else %}
+        <!--搜索结果展示-->
+        <div  style="margin:20px 20px 20px 20px;background-color:#FFFFFF;border-radius: 4px;min-height:100px;text-align:center">
+            <div style="padding:20px;">
+                <table class="table table-bordered table-hover"  id="show_tab">
+                  <caption>检索结果 {{count}} 条</caption>
+
+                  <thead>
+                    <tr  id="show_tab_one">
+                      <th>样本编号</th>
+                      <th>产品类型</th>
+                      <th>样本类型</th>
+                      <th>性别</th>
+                      <th>年龄</th>
+                      <th>临床信息</th>
+                      <th>检查信息</th>
+                      <th>其它检测</th>
+                      <th>是否患病</th>
+                      <th>探针</th>
+                      <th>路径</th>
+                      {% if result_dict1 == 'result_dict1' %}
+                        <th>质控指标</th>
+                      {% endif %}
+                      {% if result_dict2 == 'result_dict2' %}
+                        <th>比对指标</th>
+                      {% endif %}
+                      {% if result_dict3 == 'result_dict3' %}
+                        <th>变异指标</th>
+                      {% endif %}
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for m in DB_data %}
+                     <tr  id="show_tab_tr">
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.bus_code}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.test_item}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.sample_type}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.sex}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.age}}</td>
+                         <!--方式一，使用弹出框方式-->
+                        <!--td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'  title="查看详细数据"
+                            data-container="body" data-toggle="popover" data-placement="top"
+                            data-content="{{m.clinical_info}}">
+                        {{m.clinical_info}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'  title="查看详细数据"
+                            data-container="body" data-toggle="popover" data-placement="top"
+                            data-content="{{m.body_check}}">
+                        {{m.body_check}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'  title="查看详细数据"
+                            data-container="body" data-toggle="popover" data-placement="top"
+                            data-content="{{m.other_test_info}}">
+                        {{m.other_test_info}}</td-->
+                         <!--方式二，使用工具提示方式(效果比较好)-->
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.clinical_info}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.clinical_info}}</p></td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.body_check}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.body_check}}</p></td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.other_test_info}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.other_test_info}}</p></td>
+
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.is_ill}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.probe}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.path}}</td>
+                        {% if result_dict1 == 'result_dict1' %}
+                        <td><a href='/homechild/?type=qc&id={{m.id}}'>点击查看</a></td>
+                        {% endif %}
+                        {% if result_dict2 == 'result_dict2' %}
+                        <td><a href='/homechild/?type=algin&id={{m.id}}'>点击查看</a></td>
+                        {% endif %}
+                        {% if result_dict3 == 'result_dict3' %}
+                        <td><a href='/homechild/?type=snp_indel&id={{m.id}}'>点击查看</a></td>
+                        {% endif %}
+                     </tr>
+                  {% endfor %}
+
+                  </tbody>
+
+                </table>
+					<div style="text-align: center;">
+						<button  id="lastpage" type="button" class="btn btn-default">上一页</button>
+						<input type="text" class="form-control" id="curPage" style="width:100px;display:inline;">
+						<button  id="npage" type="button" class="btn btn-default">确定</button>
+						<button  id="nextpage" type="button" class="btn btn-default">下一页</button>
+						<!--input type="text" class="form-control" id="page" style="width:200px;display:inline;" readonly="readonly" -->
+						<span class="badge" id="page"></span>
+					</div>
+            </div>
+        </div>
+
+
+<script>
+    //方式一，使用弹出框方式
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+
+<script>
+    //方式二，使用工具提示方式
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+
+<script>
+    //table分页        
+    var pageSize = 20;  //每页显示的记录条数   
+    var curPage = 0;   //显示第curPage页
+    var len;         //总行数
+    var page;        //总页数
+    $(function () {
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "page:" + page);
+        document.getElementById("page").innerHTML = ' 共 ' + page + ' 页';
+        curPage = 1;
+        displayPage(); //显示第一页
+        $("#nextpage").click(function () {//下一页
+            if (curPage < page) {
+                curPage += 1;
+            }
+            else {
+                //alert("已经是最后一页");
+            }
+            displayPage();
+        });
+        $("#lastpage").click(function () {//上一页
+            if (curPage > 1) {
+                curPage -= 1;
+            }
+            else {
+                //alert("已经是第一页");
+            }
+            displayPage();
+        });
+        $("#npage").click(function () {//跳到固定某一页
+            var npage = parseInt(document.getElementById("curPage").value);
+            if (npage > page || npage < 1) {
+                //alert("该页不存在");
+            }
+            else {
+                curPage = npage;
+            }
+            displayPage();
+        });
+    });
+
+    function displayPage() {
+        var begin = (curPage - 1) * pageSize; //起始记录号
+        var end = begin + pageSize;
+        console.log("  begin:" + len + "   end:" + end);
+        if (end > len) end = len;
+        $("#show_tab tr").hide();
+        $("#show_tab tr").each(function (i) {
+            if (i - 1 >= begin && i - 1 < end)//显示第page页的记录
+            {
+                $("#show_tab_one").show();
+                $(this).show();
+                document.getElementById("curPage").value = curPage;
+            }
+        });
+
+    }
+    function pageSize2() {
+        curPage = 0;   //显示第curPage页   
+        pageSize = parseInt(document.getElementById("pageSize").value);
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "   page:" + page);
+        document.getElementById("page").value = page;
+        curPage = 1;
+        displayPage(); //显示第一页   
+    }
+</script>
+{% endif %}
+{% endblock %}

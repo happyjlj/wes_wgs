@@ -1,0 +1,995 @@
+﻿{% extends "base.html" %}
+<!--下面这句应该是引用静态文件-->
+{% load static %}
+<!--下面这句应该是与模板的block content匹配起来使用，下面应该是正文-->
+
+
+{% block content %}
+{% if count == '0' %}
+{% else %}
+	<style>
+		.table th{text-align:center;}
+		.table thead tr td{padding:2px;}
+	</style>
+
+        <!--搜索结果展示-->
+        <div  style="margin:20px 0px 20px 0px;background-color:#FFFFFF;border-radius: 4px;min-height:100px;text-align:center;" id='PickUSE'>
+            <div style="padding:0px;width:100%;overflow-x:auto;height:500px;overflow-y:auto">
+                <table class="table table-bordered table-hover"  id="show_tab">
+                  <caption>检索结果 {{count}} 条</caption>
+                         <p hidden name="result_dict_1" id="result_dict_1">{{ result_dict1 }}</p>
+                         <p hidden name="result_dict_2" id="result_dict_2">{{ result_dict2 }}</p>
+                         <p hidden name="result_dict_3" id="result_dict_3">{{ result_dict3 }}</p>
+                  <thead >
+                    <tr  id="show_tab_one">
+					  <th  rowspan="3" style="padding:10px 3px 15px;">
+                        <a href="javascript:PickAllOrNot();"  id='PickAllUSE'>全选</a>
+                        <input hidden name="Count" id="Count" type="text" value={{count}}>
+                      </th>
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+                      <th  rowspan="3" style="padding:10px 3px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',1);desc('desc_1','样本编号')" id="desc_1">样本编号</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',2);desc('desc_2','产品类型')" id="desc_2">产品类型</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',3);desc('desc_3','样本类型')" id="desc_3">样本类型</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',4);desc('desc_4','性别')" id="desc_4">性别</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',5);desc('desc_5','年龄')" id="desc_5">年龄</th>
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+                      <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的--><!--下一个编号是 6 ，以此类推-->
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',6);desc('desc_6','临床信息')" id="desc_6">临床信息</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',7);desc('desc_7','检查信息')" id="desc_7">检查信息</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',8);desc('desc_8','其它检测')" id="desc_8">其它检测</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',9);desc('desc_9','是否患病')" id="desc_9">是否患病</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',10);desc('desc_10','探针')" id="desc_10">探针</th>
+                      <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',11);desc('desc_11','路径')" id="desc_11">路径</th>
+					  <th name='result_dict1' colspan="19" >质控指标</th>
+                      <th name='result_dict2' colspan="27" >比对指标</th>
+                      <th name='result_dict3' colspan="56" >变异指标</th>
+                    </tr>
+					<tr id="show_tab_two">
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',12);desc('desc_12','serial_no')" id="desc_12"> serial_no<p></p></th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',13);desc('desc_13','lib_type')" id="desc_13">lib_type<p></p></th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',14);desc('desc_14','project_code')" id="desc_14">project_code<p></p></th>
+                        <!--需要画图的部分-->
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_15' onclick="$.sortTable.sort('show_tab',15);desc('desc_15','排序')">排序</p><a href="javascript:SubmitForm('qc_clean_per');">clean_per</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_16' onclick="$.sortTable.sort('show_tab',16);desc('desc_16','排序')">排序</p><a href="javascript:SubmitForm('qc_clean_reads');">clean_reads</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_17' onclick="$.sortTable.sort('show_tab',17);desc('desc_17','排序')">排序</p><a href="javascript:SubmitForm('qc_clean_bases');">clean_bases</a>
+						</th>
+                        <th  name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_18' onclick="$.sortTable.sort('show_tab',18);desc('desc_18','排序')">排序</p><a href="javascript:SubmitForm_2('cleanq20');">cleanq20</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_19' onclick="$.sortTable.sort('show_tab',19);desc('desc_19','排序')">排序</p><a href="javascript:SubmitForm_2('cleanq30');">cleanq30</a>
+						</th>
+                        <th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_20' onclick="$.sortTable.sort('show_tab',20);desc('desc_20','排序')">排序</p><a href="javascript:SubmitForm_2('clean_n');">clean_n</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_21' onclick="$.sortTable.sort('show_tab',21);desc('desc_21','排序')">排序</p><a href="javascript:SubmitForm_2('clean_gc');">clean_gc</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_22' onclick="$.sortTable.sort('show_tab',22);desc('desc_22','排序')">排序</p><a href="javascript:SubmitForm_2('raw_gc');">raw_gc</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_23' onclick="$.sortTable.sort('show_tab',23);desc('desc_23','排序')">排序</p><a href="javascript:SubmitForm_2('read_length');">read_length</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_24' onclick="$.sortTable.sort('show_tab',24);desc('desc_24','排序')">排序</p><a href="javascript:SubmitForm('qc_adapter');">adapter</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_25'  onclick="$.sortTable.sort('show_tab',25);desc('desc_25','排序')">排序</p><a href="javascript:SubmitForm('qc_pool_lib_data');">pool_lib_data</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_26' onclick="$.sortTable.sort('show_tab',26);desc('desc_26','排序')">排序</p><a href="javascript:SubmitForm('qc_mapped');">mapped</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_27' onclick="$.sortTable.sort('show_tab',27);desc('desc_27','排序')">排序</p><a href="javascript:SubmitForm('qc_paired');">paired</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_28' onclick="$.sortTable.sort('show_tab',28);desc('desc_28','排序')">排序</p><a href="javascript:SubmitForm('qc_insert');">insert</a>
+						</th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',29);desc('desc_29','sd')" id="desc_29">sd<p></p></th>
+						<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_30' onclick="$.sortTable.sort('show_tab',30);desc('desc_30','排序')">排序</p><a href="javascript:SubmitForm('qc_duplication');">duplication</a>
+						</th>
+					<!-- algin信息-->
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_31' onclick="$.sortTable.sort('show_tab',31);desc('desc_31','排序')">排序</p><a href="javascript:SubmitForm('align_clean_reads');">clean_reads</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_32' onclick="$.sortTable.sort('show_tab',32);desc('desc_32','排序')">排序</p><a href="javascript:SubmitForm('align_mapped_reads');">mapped_reads</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_33'  onclick="$.sortTable.sort('show_tab',33);desc('desc_33','排序')">排序</p><a href="javascript:SubmitForm('align_duplicate_reads');">duplicate_reads</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_34' onclick="$.sortTable.sort('show_tab',34);desc('desc_34','排序')">排序</p><a href="javascript:SubmitForm('align_unique_reads');">unique_reads</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  onclick="$.sortTable.sort('show_tab',35);desc('desc_35','排序')">
+							<p id='desc_35'>排序</p><a href="javascript:SubmitForm('align_reads_unique_target');">reads_unique_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_36' onclick="$.sortTable.sort('show_tab',36);desc('desc_36','排序')">排序</p><a href="javascript:SubmitForm('align_reads_unique_genome');">reads_unique_genome</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_37' onclick="$.sortTable.sort('show_tab',37);desc('desc_37','排序')">排序</p><a href="javascript:SubmitForm('align_total_baseson_target');">total_baseson_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_38' onclick="$.sortTable.sort('show_tab',38);desc('desc_38','排序')">排序</p><a href="javascript:SubmitForm('align_total_basesnear_target');">total_basesnear_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_39' onclick="$.sortTable.sort('show_tab',39);desc('desc_39','排序')">排序</p><a href="javascript:SubmitForm('align_total_seqon_target');">total_seqon_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_40'  onclick="$.sortTable.sort('show_tab',40);desc('desc_40','排序')">排序</p><a href="javascript:SubmitForm('align_total_seqnear_target');">total_seqnear_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_41'  onclick="$.sortTable.sort('show_tab',41);desc('desc_41','排序')">排序</p><a href="javascript:SubmitForm('align_total_effective_yield');">total_effective_yield</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_42' onclick="$.sortTable.sort('show_tab',42);desc('desc_42','排序')">排序</p><a href="javascript:SubmitForm('align_feb_on_target');">feb_on_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_43' onclick="$.sortTable.sort('show_tab',43);desc('desc_43','排序')">排序</p><a href="javascript:SubmitForm('align_feb_onnear_target');">feb_onnear_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_44' onclick="$.sortTable.sort('show_tab',44);desc('desc_44','排序')">排序</p><a href="javascript:SubmitForm('align_fraction_unique_target');">fraction_unique_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_45' onclick="$.sortTable.sort('show_tab',45);desc('desc_45','排序')">排序</p><a href="javascript:SubmitForm('align_avg_seqdepthon_target');">avg_seqdepthon_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;" >
+							<p id='desc_46'  onclick="$.sortTable.sort('show_tab',46);desc('desc_46','排序')">排序</p><a href="javascript:SubmitForm('align_avg_seqdepthnear_target');">avg_seqdepthnear_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_47' onclick="$.sortTable.sort('show_tab',47);desc('desc_47','排序')">排序</p><a href="javascript:SubmitForm('align_avg_insert_size');">avg_insert_size</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_48' onclick="$.sortTable.sort('show_tab',48);desc('desc_48','排序')">排序</p><a href="javascript:SubmitForm('align_base_coveredon_target');">base_coveredon_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_49' onclick="$.sortTable.sort('show_tab',49);desc('desc_49','排序')">排序</p><a href="javascript:SubmitForm('align_coverage_target_region');">coverage_target_region</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_50' onclick="$.sortTable.sort('show_tab',50);desc('desc_50','排序')">排序</p><a href="javascript:SubmitForm('align_base_coverednear_target');">base_coverednear_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_51' onclick="$.sortTable.sort('show_tab',51);desc('desc_51','排序')">排序</p><a href="javascript:SubmitForm('align_coverage_near_target');">coverage_near_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_52' onclick="$.sortTable.sort('show_tab',52);desc('desc_52','排序')">排序</p><a href="javascript:SubmitForm('align_mismatch_in_target');">mismatch_in_target</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_53' onclick="$.sortTable.sort('show_tab',53);desc('desc_53','排序')">排序</p><a href="javascript:SubmitForm('align_mismatch_in_total');">mismatch_in_total</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_54' onclick="$.sortTable.sort('show_tab',54);desc('desc_54','排序')">排序</p><a href="javascript:SubmitForm('align_fraction_covered_4x');">fraction_covered_4x</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_55' onclick="$.sortTable.sort('show_tab',55);desc('desc_55','排序')">排序</p><a href="javascript:SubmitForm('align_fraction_covered_10x');">fraction_covered_10x</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_56' onclick="$.sortTable.sort('show_tab',56);desc('desc_56','排序')">排序</p><a href="javascript:SubmitForm('align_fraction_covered_20x');">fraction_covered_20x</a>
+						</th>
+						<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+							<p id='desc_57' onclick="$.sortTable.sort('show_tab',57);desc('desc_57','排序')">排序</p><a href="javascript:SubmitForm('align_fraction_covered_50x');">fraction_covered_50x</a>
+						</th>
+					<!-- 变异信息-->
+						<th name='result_dict3' colspan="29">snp</th>
+						<th name='result_dict3' colspan="27">indel</th>
+					
+					</tr>
+					<tr id="show_tab_three">
+						
+						<!-- snp变异信息-->
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_58' onclick="$.sortTable.sort('show_tab',58);desc('desc_58','排序')">排序</p><a href="javascript:SubmitForm('snp_total_snp');">total_snp</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_59'  onclick="$.sortTable.sort('show_tab',59);desc('desc_59','排序')">排序</p><a href="javascript:SubmitForm('snp_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_60' onclick="$.sortTable.sort('show_tab',60);desc('desc_60','排序')">排序</p><a href="javascript:SubmitForm('snp_genome1000_only');">genome1000_only</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_61' onclick="$.sortTable.sort('show_tab',61);desc('desc_61','排序')">排序</p><a href="javascript:SubmitForm('snp_dbsnp150_only');">dbsnp150_only</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_62' onclick="$.sortTable.sort('show_tab',62);desc('desc_62','排序')">排序</p><a href="javascript:SubmitForm('snp_novel');">novel</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_63' onclick="$.sortTable.sort('show_tab',63);desc('desc_63','排序')">排序</p><a href="javascript:SubmitForm('snp_het');">het</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_64' onclick="$.sortTable.sort('show_tab',64);desc('desc_64','排序')">排序</p><a href="javascript:SubmitForm('snp_homo');">homo</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_65' onclick="$.sortTable.sort('show_tab',65);desc('desc_65','排序')">排序</p><a href="javascript:SubmitForm('snp_synonymous_snv');">synonymous_snv</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_66'  onclick="$.sortTable.sort('show_tab',66);desc('desc_66','排序')">排序</p><a href="javascript:SubmitForm('snp_nonsynonymous_snv');">nonsynonymous_snv</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_67' onclick="$.sortTable.sort('show_tab',67);desc('desc_67','排序')">排序</p><a href="javascript:SubmitForm('snp_exonic');">exonic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_68' onclick="$.sortTable.sort('show_tab',68);desc('desc_68','排序')">排序</p><a href="javascript:SubmitForm('snp_intergenic');">intergenic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_69'  onclick="$.sortTable.sort('show_tab',69);desc('desc_69','排序')">排序</p><a href="javascript:SubmitForm('snp_intronic');">intronic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_70' onclick="$.sortTable.sort('show_tab',70);desc('desc_70','排序')">排序</p><a href="javascript:SubmitForm('snp_splicing_predicted');">splicing_predicted</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_71' onclick="$.sortTable.sort('show_tab',71);desc('desc_71','排序')">排序</p><a href="javascript:SubmitForm('snp_utr3');">utr3</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_72' onclick="$.sortTable.sort('show_tab',72);desc('desc_72','排序')">排序</p><a href="javascript:SubmitForm('snp_utr5');">utr5</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_73' onclick="$.sortTable.sort('show_tab',73);desc('desc_73','排序')">排序</p><a href="javascript:SubmitForm('snp_utr5_utr3');">utr5_utr3</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_74' onclick="$.sortTable.sort('show_tab',74);desc('desc_74','排序')">排序</p><a href="javascript:SubmitForm('snp_downstream');">downstream</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_75' onclick="$.sortTable.sort('show_tab',75);desc('desc_75','排序')">排序</p><a href="javascript:SubmitForm('snp_exonic_splicing');">exonic_splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_76' onclick="$.sortTable.sort('show_tab',76);desc('desc_76','排序')">排序</p><a href="javascript:SubmitForm('snp_ncrna_exonic');">ncrna_exonic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_77'  onclick="$.sortTable.sort('show_tab',77);desc('desc_77','排序')">排序</p><a href="javascript:SubmitForm('snp_ncrna_exonic_splicing');">ncrna_exonic_splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_78' onclick="$.sortTable.sort('show_tab',78);desc('desc_78','排序')">排序</p><a href="javascript:SubmitForm('snp_ncrna_intronic');">ncrna_intronic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_79' onclick="$.sortTable.sort('show_tab',79);desc('desc_79','排序')">排序</p><a href="javascript:SubmitForm('snp_ncrna_splicing');">ncrna_splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_80' onclick="$.sortTable.sort('show_tab',80);desc('desc_80','排序')">排序</p><a href="javascript:SubmitForm('snp_splicing');">splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_81'onclick="$.sortTable.sort('show_tab',81);desc('desc_81','排序')">排序</p><a href="javascript:SubmitForm('snp_stopgain');">stopgain</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_82' onclick="$.sortTable.sort('show_tab',82);desc('desc_82','排序')">排序</p><a href="javascript:SubmitForm('snp_stoploss');">stoploss</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_83' onclick="$.sortTable.sort('show_tab',83);desc('desc_83','排序')">排序</p><a href="javascript:SubmitForm('snp_unknown_info');">unknown_info</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_84' onclick="$.sortTable.sort('show_tab',84);desc('desc_84','排序')">排序</p><a href="javascript:SubmitForm('snp_upstream');">upstream</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_85' onclick="$.sortTable.sort('show_tab',85);desc('desc_85','排序')">排序</p><a href="javascript:SubmitForm('snp_upstream_downstream');">upstream_downstream</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_86' onclick="$.sortTable.sort('show_tab',86);desc('desc_86','排序')">排序</p><a href="javascript:SubmitForm('snp_ti_tv');">ti_tv</a>
+						</th>
+						
+						<!--indel变异信息-->
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_87'  onclick="$.sortTable.sort('show_tab',87);desc('desc_87','排序')">排序</p><a href="javascript:SubmitForm('indel_total_indel');">total_indel</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_88'  onclick="$.sortTable.sort('show_tab',88);desc('desc_88','排序')">排序</p><a href="javascript:SubmitForm('indel_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_89' onclick="$.sortTable.sort('show_tab',89);desc('desc_89','排序')">排序</p><a href="javascript:SubmitForm('indel_dbsnp150_only');">dbsnp150_only</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_90'  onclick="$.sortTable.sort('show_tab',90);desc('desc_90','排序')">排序</p><a href="javascript:SubmitForm('indel_novel');">novel</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_91' onclick="$.sortTable.sort('show_tab',91);desc('desc_91','排序')">排序</p><a href="javascript:SubmitForm('indel_het');">het</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_92' onclick="$.sortTable.sort('show_tab',92);desc('desc_92','排序')">排序</p><a href="javascript:SubmitForm('indel_homo');">homo</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_93' onclick="$.sortTable.sort('show_tab',93);desc('desc_93','排序')">排序</p><a href="javascript:SubmitForm('indel_exonic');">exonic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_94' onclick="$.sortTable.sort('show_tab',94);desc('desc_94','排序')">排序</p><a href="javascript:SubmitForm('indel_intergenic');">intergenic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_95' onclick="$.sortTable.sort('show_tab',95);desc('desc_95','排序')">排序</p><a href="javascript:SubmitForm('indel_intronic');">intronic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_96' onclick="$.sortTable.sort('show_tab',96);desc('desc_96','排序')">排序</p><a href="javascript:SubmitForm('indel_utr3');">utr3</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_97'  onclick="$.sortTable.sort('show_tab',97);desc('desc_97','排序')">排序</p><a href="javascript:SubmitForm('indel_utr5');">utr5</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_98' onclick="$.sortTable.sort('show_tab',98);desc('desc_98','排序')">排序</p><a href="javascript:SubmitForm('indel_utr5_utr3');">utr5_utr3</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_99' onclick="$.sortTable.sort('show_tab',99);desc('desc_99','排序')">排序</p><a href="javascript:SubmitForm('indel_downstream');">downstream</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_100' onclick="$.sortTable.sort('show_tab',100);desc('desc_100','排序')">排序</p><a href="javascript:SubmitForm('indel_exonic_splicing');">exonic_splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_101' onclick="$.sortTable.sort('show_tab',101);desc('desc_101','排序')">排序</p><a href="javascript:SubmitForm('indel_frameshift_deletion');">frameshift_deletion</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_102' onclick="$.sortTable.sort('show_tab',102);desc('desc_102','排序')">排序</p><a href="javascript:SubmitForm('indel_frameshift_insertion');">frameshift_insertion</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_103'  onclick="$.sortTable.sort('show_tab',103);desc('desc_103','排序')">排序</p><a href="javascript:SubmitForm('indel_ncrna_exonic');">ncrna_exonic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_104' onclick="$.sortTable.sort('show_tab',104);desc('desc_104','排序')">排序</p><a href="javascript:SubmitForm('indel_ncrna_exonic_splicing');">ncrna_exonic_splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_105' onclick="$.sortTable.sort('show_tab',105);desc('desc_105','排序')">排序</p><a href="javascript:SubmitForm('indel_ncrna_intronic');">ncrna_intronic</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_106' onclick="$.sortTable.sort('show_tab',106);desc('desc_106','排序')">排序</p><a href="javascript:SubmitForm('indel_nonframeshift_deletion');">nonframeshift_deletion</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_107' onclick="$.sortTable.sort('show_tab',107);desc('desc_107','排序')">排序</p><a href="javascript:SubmitForm('indel_nonframeshift_insertion');">nonframeshift_insertion</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;" >
+							<p id='desc_108'  onclick="$.sortTable.sort('show_tab',108);desc('desc_108','排序')">排序</p><a href="javascript:SubmitForm('indel_splicing');">splicing</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_109' onclick="$.sortTable.sort('show_tab',109);desc('desc_109','排序')">排序</p><a href="javascript:SubmitForm('indel_stopgain');">stopgain</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_110' onclick="$.sortTable.sort('show_tab',110);desc('desc_110','排序')">排序</p><a href="javascript:SubmitForm('indel_stoploss');">stoploss</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_111' onclick="$.sortTable.sort('show_tab',111);desc('desc_111','排序')">排序</p><a href="javascript:SubmitForm('indel_unknown_info');">unknown_info</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_112' onclick="$.sortTable.sort('show_tab',112);desc('desc_112','排序')">排序</p><a href="javascript:SubmitForm('indel_upstream');">upstream</a>
+						</th>
+						<th name='result_dict3' style="padding:15px 2px 15px;"  >
+							<p id='desc_113' onclick="$.sortTable.sort('show_tab',113);desc('desc_113','排序')">排序</p><a href="javascript:SubmitForm('indel_upstream_downstream');">upstream_downstream</a>
+						</th>
+					<tr>
+                  </thead>
+                  <tbody>
+                  {% for m in DB_data %}
+                     <tr  id="show_tab_tr">
+                        <td style='min-width: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<!--这里把CheckBox的Value值春芳BusCode，减少Django函数运行时间-->
+                            <input type="checkbox" id=count{{forloop.counter0}} name=count{{forloop.counter0}} value={{m.bus_code}} />
+                        </td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.bus_code}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.bus_code}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.test_item}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.test_item}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.sample_type}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.sample_type}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.sex}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.age}}</td>
+                         <!--方式二，使用工具提示方式(效果比较好)-->
+                        <td style='max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.clinical_info}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.clinical_info}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.body_check}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.body_check}}</p></td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.other_test_info}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.other_test_info}}</p></td>
+
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.is_ill}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.probe}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.path}}</td>
+                        
+							{% for i in m.qc %}
+                                <td name='result_dict1'>{{i.serial_no}}</td>
+                                <td name='result_dict1'>{{i.lib_type}}</td>
+                                <td name='result_dict1' style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+									<p data-toggle="tooltip"
+										data-placement="top"
+										title={{i.project_code}}
+										style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+										{{i.project_code}}</p></td>
+								</td>
+                                <td name='result_dict1'>{{i.clean_per}}</td>
+                                <td name='result_dict1'>{{i.clean_reads}}</td>
+                                <td name='result_dict1'>{{i.clean_bases}}</td>
+                                <td name='result_dict1' >{{i.cleanq20}}</td>
+                                <td name='result_dict1' >{{i.cleanq30}}</td>
+                                <td name='result_dict1'>{{i.clean_n}}</td>
+                                <td name='result_dict1'>{{i.clean_gc}}</td>
+								<td name='result_dict1'>{{i.raw_gc}}</td>
+                                <td name='result_dict1'>{{i.read_length}}</td>
+                                <td name='result_dict1'>{{i.adapter}}</td>
+                                <td name='result_dict1'>{{i.pool_lib_data}}</td>
+                                <td name='result_dict1'>{{i.mapped}}</td>
+                                <td name='result_dict1'>{{i.paired}}</td>
+                                <td name='result_dict1'>{{i.insert}}</td>
+                                <td name='result_dict1'>{{i.sd}}</td>
+                                <td name='result_dict1'>{{i.duplication}}</td>
+                          {% endfor %}
+								{% for i in m.algin %}
+								<td name='result_dict2'>{{i.clean_reads}}</td>
+                                <td name='result_dict2'>{{i.mapped_reads}}</td>
+                                <td name='result_dict2'>{{i.duplicate_reads}}</td>
+                                <td name='result_dict2'>{{i.unique_reads}}</td>
+                                <td name='result_dict2'>{{i.reads_unique_target}}</td>
+                                <td name='result_dict2'>{{i.reads_unique_genome}}</td>
+                                <td name='result_dict2'>{{i.total_baseson_target}}</td>
+                                <td name='result_dict2'>{{i.total_basesnear_target}}</td>
+                                <td name='result_dict2'>{{i.total_seqon_target}}</td>
+                                <td name='result_dict2'>{{i.total_seqnear_target}}</td>
+								<td name='result_dict2'>{{i.total_effective_yield}}</td>
+                                <td name='result_dict2'>{{i.feb_on_target}}</td>
+                                <td name='result_dict2'>{{i.feb_onnear_target}}</td>
+                                <td name='result_dict2'>{{i.fraction_unique_target}}</td>
+                                <td name='result_dict2'>{{i.avg_seqdepthon_target}}</td>
+                                <td name='result_dict2'>{{i.avg_seqdepthnear_target}}</td>
+                                <td name='result_dict2'>{{i.avg_insert_size}}</td>
+                                <td name='result_dict2'>{{i.base_coveredon_target}}</td>
+                                <td name='result_dict2'>{{i.coverage_target_region}}</td>
+                                <td name='result_dict2'>{{i.base_coverednear_target}}</td>
+								<td name='result_dict2'>{{i.coverage_near_target}}</td>
+                                <td name='result_dict2'>{{i.mismatch_in_target}}</td>
+                                <td name='result_dict2'>{{i.mismatch_in_total}}</td>
+                                <td name='result_dict2'>{{i.fraction_coveredt_4x}}</td>
+                                <td name='result_dict2'>{{i.fraction_covered_10x}}</td>
+                                <td name='result_dict2'>{{i.fraction_covered_20x}}</td>
+                                <td name='result_dict2'>{{i.fraction_covered_50x}}</td>
+							 {% endfor %}
+							{% for i in m.snp %}
+								<!--snp-->
+								<td name='result_dict3'>{{i.total_snp}}</td>
+                                <td  name='result_dict3'>{{i.genome1000_and_dbsnp150}}</td>
+                                <td  name='result_dict3'>{{i.genome1000_only}}</td>
+                                <td  name='result_dict3'>{{i.dbsnp150_only}}</td>
+                                <td  name='result_dict3'>{{i.novel}}</td>
+                                <td  name='result_dict3'>{{i.het}}</td>
+                                <td  name='result_dict3'>{{i.homo}}</td>
+                                <td  name='result_dict3'>{{i.synonymous_snv}}</td>
+                                <td  name='result_dict3'>{{i.nonsynonymous_snv}}</td>
+                                <td  name='result_dict3'>{{i.exonic}}</td>
+								<td  name='result_dict3'>{{i.intergenic}}</td>
+                                <td  name='result_dict3'>{{i.intronic}}</td>
+                                <td  name='result_dict3'>{{i.splicing_predicted}}</td>
+                                <td  name='result_dict3'>{{i.utr3}}</td>
+                                <td  name='result_dict3'>{{i.utr5}}</td>
+                                <td  name='result_dict3'>{{i.utr5_utr3}}</td>
+                                <td  name='result_dict3'>{{i.downstream}}</td>
+                                <td  name='result_dict3'>{{i.exonic_splicing}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_exonic}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_exonic_splicing}}</td>
+								<td  name='result_dict3'>{{i.ncrna_intronic}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_splicing}}</td>
+                                <td  name='result_dict3'>{{i.splicing}}</td>
+                                <td  name='result_dict3'>{{i.stopgain}}</td>
+                                <td  name='result_dict3'>{{i.stoploss}}</td>
+                                <td  name='result_dict3'>{{i.unknown_info}}</td>
+                                <td  name='result_dict3'>{{i.upstream}}</td>
+                                <td  name='result_dict3'>{{i.upstream_downstream}}</td>
+                                <td  name='result_dict3'>{{i.ti_tv}}</td>
+							{% endfor %}
+							{% for i in m.indel %}
+								<td  name='result_dict3'>{{i.total_indel}}</td>
+                                <td  name='result_dict3'>{{i.genome1000_and_dbsnp150}}</td>
+                                <td  name='result_dict3'>{{i.dbsnp150_only}}</td>
+                                <td  name='result_dict3'>{{i.novel}}</td>
+                                <td  name='result_dict3'>{{i.het}}</td>
+                                <td  name='result_dict3'>{{i.homo}}</td>
+                                <td  name='result_dict3'>{{i.exonic}}</td>
+                                <td  name='result_dict3'>{{i.intergenic}}</td>
+                                <td  name='result_dict3'>{{i.intronic}}</td>
+                                <td  name='result_dict3'>{{i.utr3}}</td>
+								<td  name='result_dict3'>{{i.utr5}}</td>
+                                <td  name='result_dict3'>{{i.utr5_utr3}}</td>
+                                <td  name='result_dict3'>{{i.downstream}}</td>
+                                <td  name='result_dict3'>{{i.exonic_splicing}}</td>
+                                <td  name='result_dict3'>{{i.frameshift_deletion}}</td>
+                                <td  name='result_dict3'>{{i.frameshift_insertion}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_exonic}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_exonic_splicing}}</td>
+                                <td  name='result_dict3'>{{i.ncrna_intronic}}</td>
+                                <td  name='result_dict3'>{{i.nonframeshift_deletion}}</td>
+								<td  name='result_dict3'>{{i.nonframeshift_insertion}}</td>
+                                <td  name='result_dict3'>{{i.splicing}}</td>
+                                <td  name='result_dict3'>{{i.stopgain}}</td>
+                                <td  name='result_dict3'>{{i.stoploss}}</td>
+                                <td  name='result_dict3'>{{i.unknown_info}}</td>
+                                <td  name='result_dict3'>{{i.upstream}}</td>
+                                <td  name='result_dict3'>{{i.upstream_downstream}}</td>
+							{% endfor %}
+                     </tr>
+                  {% endfor %}
+                  </tbody>
+
+                </table>
+
+
+<script>
+    //方式一，使用弹出框方式
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+
+<script>
+    //方式二，使用工具提示方式
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+
+<!--script>
+    //table分页        
+    var pageSize = 20;  //每页显示的记录条数   
+    var curPage = 0;   //显示第curPage页
+    var len;         //总行数
+    var page;        //总页数
+    $(function () {
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "page:" + page);
+        document.getElementById("page").innerHTML = ' 共 ' + page + ' 页';
+        curPage = 1;
+        displayPage(); //显示第一页
+        $("#nextpage").click(function () {//下一页
+            if (curPage < page) {
+                curPage += 1;
+            }
+            else {
+                //alert("已经是最后一页");
+            }
+            displayPage();
+        });
+        $("#lastpage").click(function () {//上一页
+            if (curPage > 1) {
+                curPage -= 1;
+            }
+            else {
+                //alert("已经是第一页");
+            }
+            displayPage();
+        });
+        $("#npage").click(function () {//跳到固定某一页
+            var npage = parseInt(document.getElementById("curPage").value);
+            if (npage > page || npage < 1) {
+                //alert("该页不存在");
+            }
+            else {
+                curPage = npage;
+            }
+            displayPage();
+        });
+    });
+
+    function displayPage() {
+        var begin = (curPage - 1) * pageSize; //起始记录号
+        var end = begin + pageSize;
+        console.log("  begin:" + len + "   end:" + end);
+        if (end > len) end = len;
+        $("#show_tab tr").hide();
+        $("#show_tab tr").each(function (i) {
+            if (i - 1 >= begin && i - 1 < end)//显示第page页的记录
+            {
+                $("#show_tab_one").show();
+				$("#show_tab_two").show();
+				$("#show_tab_three").show();
+                $(this).show();
+				// $(this).hide();
+                document.getElementById("curPage").value = curPage;
+            }
+        });
+
+    }
+    function pageSize2() {
+        curPage = 0;   //显示第curPage页   
+        pageSize = parseInt(document.getElementById("pageSize").value);
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "   page:" + page);
+        document.getElementById("page").value = page;
+        curPage = 1;
+        displayPage(); //显示第一页   
+    }
+</script-->
+
+
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<script>
+
+    function SubmitForm(val1) {
+        //原本需要提交的参数
+        var dataType = val1;
+		
+        //创建url
+        var url = "/single/";
+        //创建form
+        var form = $("<form></form>");
+        //设置属性
+        form.attr("action", url);
+        form.attr("method", "post");
+        //获取总数
+        var Count = document.getElementById("Count").value;
+        var i = 0;
+        for (i = 0;i < (Count*1);i++) {
+            var CountNow = 'count' + String(i);
+            var ValueNow = 'value' + String(i);
+            if (document.getElementById(CountNow).checked)
+            {
+			 datastate = true;
+			 CheckValue_busCode = document.getElementById(CountNow).value;
+			 }
+            else {
+             datastate = false;
+			 CheckValue_busCode = ''
+            }
+            var inputCheckBox = $("<input type='checkbox' name=" + CountNow + ">");
+			inputCheckBox.attr("checked", datastate);
+			var inputCheckBox_BusCode = $("<input type='text' name=BusCode_" + ValueNow + ">");
+            inputCheckBox_BusCode.attr("value", CheckValue_busCode);
+            form.append(inputCheckBox);
+			form.append(inputCheckBox_BusCode);
+        }
+
+        //需要后台传递
+		var inputdataType = $("<input type='text' name='dataType'/>");
+        inputdataType.attr("value", dataType);
+        var inputCount = $("<input type='text' name='Count'/>");
+        inputCount.attr("value", Count);
+        form.append(inputdataType);
+        form.append(inputCount);
+        form.appendTo("body");
+        form.hide();
+        //提交表单
+        form.submit();
+    }
+
+
+    function SubmitForm_2(val1) {
+        //原本需要提交的参数
+        var dataType = val1;
+        //创建url
+        var url = "/cartgram/";
+        //创建form
+        var form = $("<form></form>");
+        //设置属性
+        form.attr("action", url);
+        form.attr("method", "post");
+        //获取总数
+        var Count = document.getElementById("Count").value;
+        var i = 0;
+        for (i = 0; i < (Count * 1); i++) {
+            var CountNow = 'count' + String(i);
+            var ValueNow = 'value' + String(i);
+            if (document.getElementById(CountNow).checked) {
+                datastate = true;
+                CheckValue_busCode = document.getElementById(CountNow).value;
+            }
+            else {
+                datastate = false;
+                CheckValue_busCode = ''
+            }
+            var inputCheckBox = $("<input type='checkbox' name=" + CountNow + ">");
+            inputCheckBox.attr("checked", datastate);
+            var inputCheckBox_BusCode = $("<input type='text' name=BusCode_" + ValueNow + ">");
+            inputCheckBox_BusCode.attr("value", CheckValue_busCode);
+            form.append(inputCheckBox);
+            form.append(inputCheckBox_BusCode);
+        }
+
+        //需要后台传递
+        var inputdataType = $("<input type='text' name='dataType'/>");
+        inputdataType.attr("value", dataType);
+        var inputCount = $("<input type='text' name='Count'/>");
+        inputCount.attr("value", Count);
+        form.append(inputdataType);
+        form.append(inputCount);
+        form.appendTo("body");
+        form.hide();
+        //提交表单
+        form.submit();
+    }
+</script>
+
+<!--是否隐藏-->
+<script type="text/javascript">
+    window.onload = function () {
+        if (document.getElementById("result_dict_1").innerHTML != 'result_dict1') {
+            var result_dict1 = document.getElementsByName('result_dict1'); //获取name等于result_dict1的东西
+            for (i = 0; i < result_dict1.length; i++) {
+                result_dict1[i].style.display = 'none';
+            }
+        }
+        if (document.getElementById("result_dict_2").innerHTML != 'result_dict2') {
+            var result_dict2 = document.getElementsByName('result_dict2'); //获取name等于result_dict2的东西
+            for (i = 0; i < result_dict2.length; i++) {
+                result_dict2[i].style.display = 'none';
+            }
+        }
+        if (document.getElementById("result_dict_3").innerHTML != 'result_dict3') {
+            var result_dict3 = document.getElementsByName('result_dict3'); //获取name等于result_dict3的东西
+            for (i = 0; i < result_dict3.length; i++) {
+                result_dict3[i].style.display = 'none';
+            }
+        }
+    };
+</script>
+
+
+<script type="text/javascript">
+    //全选和重置按钮
+    var i = 0;
+    
+    function PickAll() {
+        var checkbox = document.getElementById('PickUSE'); //获取div
+        var checked = checkbox.getElementsByTagName('input'); //获取div下的input
+        for (i = 0; i < checked.length; i++) {
+            checked[i].checked = true
+        }
+
+    };
+
+    function PackNot() {
+        var checkbox = document.getElementById('PickUSE'); //获取div
+        var checked = checkbox.getElementsByTagName('input'); //获取div下的input
+        for (i = 0; i < checked.length; i++) {
+            checked[i].checked = false;
+        }
+    };
+    function PickAllOrNot() {
+        if (document.getElementById("PickAllUSE").innerHTML == "全选") {
+            document.getElementById("PickAllUSE").innerHTML = '取消全选';
+            PickAll();
+        }
+        else if (document.getElementById("PickAllUSE").innerHTML == "取消全选") {
+            document.getElementById("PickAllUSE").innerHTML = '全选';
+            PackNot();
+        }
+    };
+</script>
+
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+
+
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<script type="text/javascript">
+
+
+(function($){
+    //插件
+    $.extend($,{
+        //命名空间
+        sortTable:{
+            sort: function (tableId, Idx) {
+                //获取table
+				//alert(tableId)
+                var table = document.getElementById(tableId);
+                // 获取第一个body
+                var tbody = table.tBodies[0];
+                //获取行数
+                var tr = tbody.rows;
+                //定义新的行数组
+                var trValue = new Array();
+                for (var i=0; i<tr.length; i++ ) {
+                    trValue[i] = tr[i];  //将表格中各行的信息存储在新建的数组中
+                }
+				alert(Idx)
+                if (tbody.sortCol == Idx) {
+                    trValue.reverse(); //如果该列已经进行排序过了，则直接对其反序排列,仅仅是反向排序。
+                } else {
+                    //trValue.sort(compareTrs(Idx));  //进行排序
+					if(Idx>=15 && Idx<18){
+						//数值列排序
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=18&&Idx<24){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split(';')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split(';')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=24 && Idx<32){
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=32&&Idx<35){
+						
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[1].split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[1].split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=35 && Idx<42){
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=42&&Idx<45){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=45&&Idx<49){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==49){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==50){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=51 && Idx<58){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==58){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=59 && Idx<70){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[1].split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[1].split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}
+					else if(Idx>=70 && Idx<88){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=88 && Idx<96){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=96 && Idx<114){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else{	
+							trValue.sort(function(tr1, tr2){
+							var value1 = tr1.cells[Idx].innerHTML;
+							var value2 = tr2.cells[Idx].innerHTML;
+							return value1.localeCompare(value2);
+						});
+					}
+                   /** trValue.sort(function(tr1, tr2){
+                        var value1 = tr1.cells[Idx].innerHTML;
+                        var value2 = tr2.cells[Idx].innerHTML;
+                        return value1.localeCompare(value2);
+                    });**/
+                }
+        
+                var fragment = document.createDocumentFragment();  //新建一个代码片段，用于保存排序后的结果
+                for (var i=0; i<trValue.length; i++ ) {
+                    fragment.appendChild(trValue[i]);
+                }
+        
+                tbody.appendChild(fragment); //将排序的结果替换掉之前的值
+                tbody.sortCol = Idx;
+            }
+        }
+    });          
+})(jQuery);
+
+function desc_change(id, str) {
+    $("#desc_1").html("样本编号");
+    $("#desc_2").html("产品类型");
+    $("#desc_3").html("样本类型");
+    $("#desc_4").html("性别");
+    $("#desc_5").html("年龄");
+
+    $("#desc_15").html("排序");
+    $("#desc_16").html("排序");
+	//alert(id)
+    $("#" + id).html(str);
+}
+function desc(id, str) {
+    var htmlstr = $("#" + id).text().trim();
+    var c = str;
+    if (htmlstr == str) {
+        c = str + '▼';
+        $("#" + id).html(c);
+    } else if (htmlstr == str + '▼') {
+        c = str + '▲'
+        $("#" + id).html(c);
+    } else if (htmlstr == str + '▲') {
+        c = str + '▼'
+        $("#" + id).html(c);
+    }
+    desc_change(id, c)
+    }
+
+</script>
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+
+{% endif %}
+{% endblock %}

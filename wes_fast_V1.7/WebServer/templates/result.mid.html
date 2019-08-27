@@ -1,0 +1,737 @@
+{% extends "base.html" %}
+<!--下面这句应该是引用静态文件-->
+{% load static %}
+<!--下面这句应该是与模板的block content匹配起来使用，下面应该是正文-->
+
+
+{% block content %}
+{% if count == '0' %}
+{% else %}
+<style>
+		.table th{text-align:center;}
+		.table thead tr td{padding:2px;}
+		body {
+		  text-align:center;
+		  font-family:微软雅黑;
+		}
+		.fixedTable > thead > tr > th, .fixedTable > tbody > tr > td {
+		  width: 3%!important;
+		}
+		#fixedTab,#show_tab {
+		  width: 1300px;
+		  border: 1px solid gray;
+		}
+		td,th{
+		  height:35px;
+		  text-align:center;
+		}
+		#contenter {
+		  position: relative;
+		  width: 1300px;
+		  height: 500px;
+		  margin: auto;
+		  background-color: white;
+		  border: 1px solid white;
+		}
+		#fixedDiv {
+		  position: absolute;
+		  left: 0;
+		  overflow: hidden;
+		}
+		#fixedTab th {
+		  background-color: #4ca9f7;
+		  color: white;
+
+		}
+		#mainDiv{
+		  height:465px;
+		  width: 1300px;
+		  overflow:auto;
+		  overflow-x:hidden;
+		}
+</style>
+
+        <!--搜索结果展示-->
+        <div  style="margin:20px 0px 20px 0px;background-color:#FFFFFF;border-radius: 4px;min-height:100px;text-align:center;" id='PickUSE'>
+            <h5 style='text-align:left;padding:5px;'>检索结果 {{count}} 条</h5>
+             <div id="contenter" style="overflow-x:auto;">
+				<div id="fixedDiv">
+					<table class="table table-bordered table-hover"  id="fixedTab" class="fixedTable" border="1" cellpadding="0" cellspacing="0">
+					<p hidden name="result_dict_1" id="result_dict_1">{{ result_dict1 }}</p>
+					<p hidden name="result_dict_2" id="result_dict_2">{{ result_dict2 }}</p>
+                    <p hidden name="result_dict_3" id="result_dict_3">{{ result_dict3 }}</p>
+					<thead >
+						<tr  id="show_tab_one">
+							<th  rowspan="3" style="padding:10px 3px 15px;">
+								<a href="javascript:PickAllOrNot();"  id='PickAllUSE'>全选</a>
+								<input hidden name="Count" id="Count" type="text" value={{count}}>
+							</th>
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <th  rowspan="3" style="padding:10px 3px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',1);desc('desc_1','样本编号')" id="desc_1">样本编号</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',2);desc('desc_2','产品类型')" id="desc_2">产品类型</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',3);desc('desc_3','样本类型')" id="desc_3">样本类型</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',4);desc('desc_4','性别')" id="desc_4">性别</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',5);desc('desc_5','年龄')" id="desc_5">年龄</th>
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的--><!--下一个编号是 6 ，以此类推-->
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',6);desc('desc_6','临床信息')" id="desc_6">临床信息</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',7);desc('desc_7','检查信息')" id="desc_7">检查信息</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',8);desc('desc_8','其它检测')" id="desc_8">其它检测</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',9);desc('desc_9','是否患病')" id="desc_9">是否患病</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',10);desc('desc_10','探针')" id="desc_10">探针</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',11);desc('desc_11','路径')" id="desc_11">路径</th>
+						  <th name='result_dict1' colspan="2" >质控指标</th>
+						  <th name='result_dict2' colspan="2" >比对指标</th>
+						  <th name='result_dict3' colspan="4" >变异指标</th>
+						</tr>
+						<tr id="show_tab_two">
+							<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',12);desc('desc_12','serial_no')" id="desc_12"> serial_no<p></p></th>
+							<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',13);desc('desc_13','lib_type')" id="desc_13">lib_type<p></p></th>
+							
+						<!-- algin信息-->
+							<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+								<p id='desc_14' onclick="$.sortTable.sort('show_tab',14);desc('desc_14','排序')">排序</p><a href="javascript:SubmitForm('algin_clean_reads');">clean_reads</a>
+							</th>
+							<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+								<p id='desc_15' onclick="$.sortTable.sort('show_tab',15);desc('desc_15','排序')">排序</p><a href="javascript:SubmitForm('algin_mapped_reads');">mapped_reads</a>
+							</th>
+							
+						<!-- 变异信息-->
+							<th name='result_dict3' colspan="2">snp</th>
+							<th name='result_dict3' colspan="3">indel</th>
+						
+						</tr>
+						<tr id="show_tab_three">
+							
+							<!-- snp变异信息-->
+							<th name='result_dict3' style="padding:15px 2px 15px;"  >
+								<p id='desc_16' onclick="$.sortTable.sort('show_tab',16);desc('desc_16','排序')">排序</p><a href="javascript:SubmitForm('snp_total_snp');">total_snp</a>
+							</th>
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_17'  onclick="$.sortTable.sort('show_tab',17);desc('desc_17','排序')">排序</p><a href="javascript:SubmitForm('snp_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+							</th>
+							
+							
+							<!--indel变异信息-->
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_18'  onclick="$.sortTable.sort('show_tab',18);desc('desc_18','排序')">排序</p><a href="javascript:SubmitForm('indel_total_indel');">total_indel</a>
+							</th>
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_19'  onclick="$.sortTable.sort('show_tab',19);desc('desc_19','排序')">排序</p><a href="javascript:SubmitForm('indel_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+							</th>
+							
+						<tr>
+					</thead>
+				  </table>
+				</div>
+				<div id="mainDiv">
+					<table class="table table-bordered table-hover"  id="show_tab" class="fixedTable" border="1" cellpadding="0" cellspacing="0">
+					<p hidden name="result_dict_1" id="result_dict_1">{{ result_dict1 }}</p>
+					<p hidden name="result_dict_2" id="result_dict_2">{{ result_dict2 }}</p>
+                    <p hidden name="result_dict_3" id="result_dict_3">{{ result_dict3 }}</p>
+					<thead >
+						<tr  id="show_tab_one">
+							<th  rowspan="3" style="padding:10px 3px 15px;">
+								<a href="javascript:PickAllOrNot();"  id='PickAllUSE'>全选</a>
+								<input hidden name="Count" id="Count" type="text" value={{count}}>
+							</th>
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <th  rowspan="3" style="padding:10px 3px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',1);desc('desc_1','样本编号')" id="desc_1">样本编号</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',2);desc('desc_2','产品类型')" id="desc_2">产品类型</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',3);desc('desc_3','样本类型')" id="desc_3">样本类型</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',4);desc('desc_4','性别')" id="desc_4">性别</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',5);desc('desc_5','年龄')" id="desc_5">年龄</th>
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的-->
+						  <!--这个是排序，请按照给个方式更改，编号递增，不要自己改我写过的--><!--下一个编号是 6 ，以此类推-->
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',6);desc('desc_6','临床信息')" id="desc_6">临床信息</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',7);desc('desc_7','检查信息')" id="desc_7">检查信息</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',8);desc('desc_8','其它检测')" id="desc_8">其它检测</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',9);desc('desc_9','是否患病')" id="desc_9">是否患病</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',10);desc('desc_10','探针')" id="desc_10">探针</th>
+						  <th  rowspan="3" style="padding:10px 0px 15px;cursor: pointer;" onclick="$.sortTable.sort('show_tab',11);desc('desc_11','路径')" id="desc_11">路径</th>
+						  <th name='result_dict1' colspan="2" >质控指标</th>
+						  <th name='result_dict2' colspan="2" >比对指标</th>
+						  <th name='result_dict3' colspan="4" >变异指标</th>
+						</tr>
+						<tr id="show_tab_two">
+							<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',12);desc('desc_12','serial_no')" id="desc_12"> serial_no<p></p></th>
+							<th name='result_dict1' rowspan="2" style="padding:15px 2px 15px;" onclick="$.sortTable.sort('show_tab',13);desc('desc_13','lib_type')" id="desc_13">lib_type<p></p></th>
+							
+						<!-- algin信息-->
+							<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+								<p id='desc_14' onclick="$.sortTable.sort('show_tab',14);desc('desc_14','排序')">排序</p><a href="javascript:SubmitForm('algin_clean_reads');">clean_reads</a>
+							</th>
+							<th name='result_dict2' rowspan="2" style="padding:15px 2px 15px;"  >
+								<p id='desc_15' onclick="$.sortTable.sort('show_tab',15);desc('desc_15','排序')">排序</p><a href="javascript:SubmitForm('algin_mapped_reads');">mapped_reads</a>
+							</th>
+							
+						<!-- 变异信息-->
+							<th name='result_dict3' colspan="2">snp</th>
+							<th name='result_dict3' colspan="3">indel</th>
+						
+						</tr>
+						<tr id="show_tab_three">
+							
+							<!-- snp变异信息-->
+							<th name='result_dict3' style="padding:15px 2px 15px;"  >
+								<p id='desc_16' onclick="$.sortTable.sort('show_tab',16);desc('desc_16','排序')">排序</p><a href="javascript:SubmitForm('snp_total_snp');">total_snp</a>
+							</th>
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_17'  onclick="$.sortTable.sort('show_tab',17);desc('desc_17','排序')">排序</p><a href="javascript:SubmitForm('snp_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+							</th>
+							
+							
+							<!--indel变异信息-->
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_18'  onclick="$.sortTable.sort('show_tab',18);desc('desc_18','排序')">排序</p><a href="javascript:SubmitForm('indel_total_indel');">total_indel</a>
+							</th>
+							<th name='result_dict3' style="padding:15px 2px 15px;" >
+								<p id='desc_19'  onclick="$.sortTable.sort('show_tab',19);desc('desc_19','排序')">排序</p><a href="javascript:SubmitForm('indel_genome1000_and_dbsnp150');">genome1000_and_dbsnp150</a>
+							</th>
+							
+						<tr>
+					</thead>
+					<tbody>
+                  {% for m in DB_data %}
+                     <tr  id="show_tab_tr">
+                        <td style='min-width: 70px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<!--这里把CheckBox的Value值春芳BusCode，减少Django函数运行时间-->
+                            <input type="checkbox" id=count{{forloop.counter0}} name=count{{forloop.counter0}} value={{m.bus_code}} />
+                        </td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.bus_code}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.bus_code}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.test_item}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.test_item}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.sample_type}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.sample_type}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.sex}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.age}}</td>
+                         <!--方式二，使用工具提示方式(效果比较好)-->
+                        <td style='max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.clinical_info}}
+                               style='max-width: 100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;'>
+                                {{m.clinical_info}}
+							</p>
+						</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            <p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.body_check}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.body_check}}</p></td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                            
+							<p data-toggle="tooltip"
+                               data-placement="top"
+                               title={{m.other_test_info}}
+                               style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>
+                                {{m.other_test_info}}</p></td>
+
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.is_ill}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.probe}}</td>
+                        <td style='max-width: 100px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;'>{{m.path}}</td>
+                        
+							{% for i in m.qc %}
+                                <td name='result_dict1'>{{i.serial_no}}</td>
+                                <td name='result_dict1'>{{i.lib_type}}</td>
+                               
+                          {% endfor %}
+								{% for i in m.algin %}
+								<td name='result_dict2'>{{i.clean_reads}}</td>
+                                <td name='result_dict2'>{{i.mapped_reads}}</td>
+                               
+							 {% endfor %}
+							{% for i in m.snp %}
+								<!--snp-->
+								<td name='result_dict3'>{{i.total_snp}}</td>
+                                <td  name='result_dict3'>{{i.genome1000_and_dbsnp150}}</td>
+                               
+							{% endfor %}
+							{% for i in m.indel %}
+								<td  name='result_dict3'>{{i.total_indel}}</td>
+                                <td  name='result_dict3'>{{i.genome1000_and_dbsnp150}}</td>
+                                
+							{% endfor %}
+                     </tr>
+                  {% endfor %}
+                  </tbody>
+
+                </table>
+				</div>
+			</div>
+				
+
+
+<script>
+    //方式一，使用弹出框方式
+    $(function () {
+        $("[data-toggle='popover']").popover();
+    });
+</script>
+
+<script>
+    //方式二，使用工具提示方式
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+
+<!--script>
+    //table分页        
+    var pageSize = 20;  //每页显示的记录条数   
+    var curPage = 0;   //显示第curPage页
+    var len;         //总行数
+    var page;        //总页数
+    $(function () {
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "page:" + page);
+        document.getElementById("page").innerHTML = ' 共 ' + page + ' 页';
+        curPage = 1;
+        displayPage(); //显示第一页
+        $("#nextpage").click(function () {//下一页
+            if (curPage < page) {
+                curPage += 1;
+            }
+            else {
+                //alert("已经是最后一页");
+            }
+            displayPage();
+        });
+        $("#lastpage").click(function () {//上一页
+            if (curPage > 1) {
+                curPage -= 1;
+            }
+            else {
+                //alert("已经是第一页");
+            }
+            displayPage();
+        });
+        $("#npage").click(function () {//跳到固定某一页
+            var npage = parseInt(document.getElementById("curPage").value);
+            if (npage > page || npage < 1) {
+                //alert("该页不存在");
+            }
+            else {
+                curPage = npage;
+            }
+            displayPage();
+        });
+    });
+
+    function displayPage() {
+        var begin = (curPage - 1) * pageSize; //起始记录号
+        var end = begin + pageSize;
+        console.log("  begin:" + len + "   end:" + end);
+        if (end > len) end = len;
+        $("#show_tab tr").hide();
+        $("#show_tab tr").each(function (i) {
+            if (i - 1 >= begin && i - 1 < end)//显示第page页的记录
+            {
+                $("#show_tab_one").show();
+				$("#show_tab_two").show();
+				$("#show_tab_three").show();
+                $(this).show();
+				// $(this).hide();
+                document.getElementById("curPage").value = curPage;
+            }
+        });
+
+    }
+    function pageSize2() {
+        curPage = 0;   //显示第curPage页   
+        pageSize = parseInt(document.getElementById("pageSize").value);
+        len = $("#show_tab tr").length - 1;   //去掉表头     
+        page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1; //根据记录条数，计算页数
+        console.log("len:" + len + "   page:" + page);
+        document.getElementById("page").value = page;
+        curPage = 1;
+        displayPage(); //显示第一页   
+    }
+</script-->
+
+
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<script>
+
+    function SubmitForm(val1) {
+        //原本需要提交的参数
+        var dataType = val1;
+		
+        //创建url
+        var url = "/single/";
+        //创建form
+        var form = $("<form></form>");
+        //设置属性
+        form.attr("action", url);
+        form.attr("method", "post");
+        //获取总数
+        var Count = document.getElementById("Count").value;
+        var i = 0;
+        for (i = 0;i < (Count*1);i++) {
+            var CountNow = 'count' + String(i);
+            var ValueNow = 'value' + String(i);
+            if (document.getElementById(CountNow).checked)
+            {
+			 datastate = true;
+			 CheckValue_busCode = document.getElementById(CountNow).value;
+			 }
+            else {
+             datastate = false;
+			 CheckValue_busCode = ''
+            }
+            var inputCheckBox = $("<input type='checkbox' name=" + CountNow + ">");
+			inputCheckBox.attr("checked", datastate);
+			var inputCheckBox_BusCode = $("<input type='text' name=BusCode_" + ValueNow + ">");
+            inputCheckBox_BusCode.attr("value", CheckValue_busCode);
+            form.append(inputCheckBox);
+			form.append(inputCheckBox_BusCode);
+        }
+
+        //需要后台传递
+		var inputdataType = $("<input type='text' name='dataType'/>");
+        inputdataType.attr("value", dataType);
+        var inputCount = $("<input type='text' name='Count'/>");
+        inputCount.attr("value", Count);
+        form.append(inputdataType);
+        form.append(inputCount);
+        form.appendTo("body");
+        form.hide();
+        //提交表单
+        form.submit();
+    }
+
+
+    function SubmitForm_2(val1) {
+        //原本需要提交的参数
+        var dataType = val1;
+        //创建url
+        var url = "/cartgram/";
+        //创建form
+        var form = $("<form></form>");
+        //设置属性
+        form.attr("action", url);
+        form.attr("method", "post");
+        //获取总数
+        var Count = document.getElementById("Count").value;
+        var i = 0;
+        for (i = 0; i < (Count * 1); i++) {
+            var CountNow = 'count' + String(i);
+            var ValueNow = 'value' + String(i);
+            if (document.getElementById(CountNow).checked) {
+                datastate = true;
+                CheckValue_busCode = document.getElementById(CountNow).value;
+            }
+            else {
+                datastate = false;
+                CheckValue_busCode = ''
+            }
+            var inputCheckBox = $("<input type='checkbox' name=" + CountNow + ">");
+            inputCheckBox.attr("checked", datastate);
+            var inputCheckBox_BusCode = $("<input type='text' name=BusCode_" + ValueNow + ">");
+            inputCheckBox_BusCode.attr("value", CheckValue_busCode);
+            form.append(inputCheckBox);
+            form.append(inputCheckBox_BusCode);
+        }
+
+        //需要后台传递
+        var inputdataType = $("<input type='text' name='dataType'/>");
+        inputdataType.attr("value", dataType);
+        var inputCount = $("<input type='text' name='Count'/>");
+        inputCount.attr("value", Count);
+        form.append(inputdataType);
+        form.append(inputCount);
+        form.appendTo("body");
+        form.hide();
+        //提交表单
+        form.submit();
+    }
+</script>
+
+<!--是否隐藏-->
+<script type="text/javascript">
+    window.onload = function () {
+        if (document.getElementById("result_dict_1").innerHTML != 'result_dict1') {
+            var result_dict1 = document.getElementsByName('result_dict1'); //获取name等于result_dict1的东西
+            for (i = 0; i < result_dict1.length; i++) {
+                result_dict1[i].style.display = 'none';
+            }
+        }
+        if (document.getElementById("result_dict_2").innerHTML != 'result_dict2') {
+            var result_dict2 = document.getElementsByName('result_dict2'); //获取name等于result_dict2的东西
+            for (i = 0; i < result_dict2.length; i++) {
+                result_dict2[i].style.display = 'none';
+            }
+        }
+        if (document.getElementById("result_dict_3").innerHTML != 'result_dict3') {
+            var result_dict3 = document.getElementsByName('result_dict3'); //获取name等于result_dict3的东西
+            for (i = 0; i < result_dict3.length; i++) {
+                result_dict3[i].style.display = 'none';
+            }
+        }
+    };
+</script>
+
+
+<script type="text/javascript">
+    //全选和重置按钮
+    var i = 0;
+    
+    function PickAll() {
+        var checkbox = document.getElementById('PickUSE'); //获取div
+        var checked = checkbox.getElementsByTagName('input'); //获取div下的input
+        for (i = 0; i < checked.length; i++) {
+            checked[i].checked = true
+        }
+
+    };
+
+    function PackNot() {
+        var checkbox = document.getElementById('PickUSE'); //获取div
+        var checked = checkbox.getElementsByTagName('input'); //获取div下的input
+        for (i = 0; i < checked.length; i++) {
+            checked[i].checked = false;
+        }
+    };
+    function PickAllOrNot() {
+        if (document.getElementById("PickAllUSE").innerHTML == "全选") {
+            document.getElementById("PickAllUSE").innerHTML = '取消全选';
+            PickAll();
+        }
+        else if (document.getElementById("PickAllUSE").innerHTML == "取消全选") {
+            document.getElementById("PickAllUSE").innerHTML = '全选';
+            PackNot();
+        }
+    };
+</script>
+
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+<!--关于 使用选择框进行画图 修改的地方-->
+
+
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<script type="text/javascript">
+
+
+(function($){
+    //插件
+    $.extend($,{
+        //命名空间
+        sortTable:{
+            sort: function (tableId, Idx) {
+                //获取table
+				//alert(tableId)
+                var table = document.getElementById(tableId);
+                // 获取第一个body
+                var tbody = table.tBodies[0];
+                //获取行数
+                var tr = tbody.rows;
+                //定义新的行数组
+                var trValue = new Array();
+                for (var i=0; i<tr.length; i++ ) {
+                    trValue[i] = tr[i];  //将表格中各行的信息存储在新建的数组中
+                }
+        
+                if (tbody.sortCol == Idx) {
+                    trValue.reverse(); //如果该列已经进行排序过了，则直接对其反序排列,仅仅是反向排序。
+                } else {
+                    //trValue.sort(compareTrs(Idx));  //进行排序
+					if(Idx>=15 && Idx<18){
+						//数值列排序
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=18&&Idx<24){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split(';')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split(';')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=24 && Idx<32){
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=32&&Idx<35){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=35 && Idx<42){
+						trValue.sort(function(tr1, tr2){
+							var value1 = Number(tr1.cells[Idx].innerHTML);
+							var value2 = Number(tr2.cells[Idx].innerHTML);
+							return (value1 > value2) ? 1 : -1;
+						});
+					}else if(Idx>=42&&Idx<45){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=45&&Idx<49){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==49){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==50){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=51 && Idx<58){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('%')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('%')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx==58){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=59 && Idx<70){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=70 && Idx<88){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=88 && Idx<96){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML.split('(')[0]);
+								var value2 = Number(tr2.cells[Idx].innerHTML.split('(')[0]);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else if(Idx>=96 && Idx<114){
+						trValue.sort(function(tr1, tr2){
+								var value1 = Number(tr1.cells[Idx].innerHTML);
+								var value2 = Number(tr2.cells[Idx].innerHTML);
+								return (value1 > value2) ? 1 : -1;
+							});
+					}else{	
+							trValue.sort(function(tr1, tr2){
+							var value1 = tr1.cells[Idx].innerHTML;
+							var value2 = tr2.cells[Idx].innerHTML;
+							return value1.localeCompare(value2);
+						});
+					}
+                   /** trValue.sort(function(tr1, tr2){
+                        var value1 = tr1.cells[Idx].innerHTML;
+                        var value2 = tr2.cells[Idx].innerHTML;
+                        return value1.localeCompare(value2);
+                    });**/
+                }
+        
+                var fragment = document.createDocumentFragment();  //新建一个代码片段，用于保存排序后的结果
+                for (var i=0; i<trValue.length; i++ ) {
+                    fragment.appendChild(trValue[i]);
+                }
+        
+                tbody.appendChild(fragment); //将排序的结果替换掉之前的值
+                tbody.sortCol = Idx;
+            }
+        }
+    });          
+})(jQuery);
+
+function desc_change(id, str) {
+    $("#desc_1").html("样本编号");
+    $("#desc_2").html("产品类型");
+    $("#desc_3").html("样本类型");
+    $("#desc_4").html("性别");
+    $("#desc_5").html("年龄");
+
+    $("#desc_15").html("排序");
+    $("#desc_16").html("排序");
+	//alert(id)
+    $("#" + id).html(str);
+}
+function desc(id, str) {
+    var htmlstr = $("#" + id).text().trim();
+    var c = str;
+    if (htmlstr == str) {
+        c = str + '▼';
+        $("#" + id).html(c);
+    } else if (htmlstr == str + '▼') {
+        c = str + '▲'
+        $("#" + id).html(c);
+    } else if (htmlstr == str + '▲') {
+        c = str + '▼'
+        $("#" + id).html(c);
+    }
+    desc_change(id, c)
+    }
+
+</script>
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+<!--关于 排序 的地方-->
+
+{% endif %}
+{% endblock %}

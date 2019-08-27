@@ -1,0 +1,1787 @@
+nohup: ignoring input
+[10/Jan/2019 19:23:27] "GET / HTTP/1.1" 200 22058
+[10/Jan/2019 19:23:27] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[10/Jan/2019 19:23:27] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[10/Jan/2019 19:23:27] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[10/Jan/2019 19:23:27] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[10/Jan/2019 19:23:27] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[10/Jan/2019 19:23:27] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[10/Jan/2019 19:23:27] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[10/Jan/2019 19:23:27] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[10/Jan/2019 19:23:27] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[10/Jan/2019 19:27:09] "GET / HTTP/1.1" 200 22058
+[10/Jan/2019 19:27:09] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:09] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET / HTTP/1.1" 200 22058
+[10/Jan/2019 19:27:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:10] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "POST /xlsStat HTTP/1.1" 200 33593
+[10/Jan/2019 19:27:16] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[10/Jan/2019 19:27:16] "GET /gettables HTTP/1.1" 200 193318
+[15/Jan/2019 02:26:29] "GET / HTTP/1.1" 200 22058
+[15/Jan/2019 02:26:29] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[15/Jan/2019 02:26:29] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[15/Jan/2019 02:26:29] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[15/Jan/2019 02:26:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[15/Jan/2019 02:26:29] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[15/Jan/2019 02:26:29] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[15/Jan/2019 02:26:29] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[15/Jan/2019 02:26:29] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[15/Jan/2019 02:26:29] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[15/Jan/2019 02:26:29] "GET /favicon.ico HTTP/1.1" 404 2603
+[18/Jan/2019 01:05:35] "GET / HTTP/1.1" 200 22058
+[18/Jan/2019 01:05:35] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[18/Jan/2019 01:05:35] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[18/Jan/2019 01:05:35] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[18/Jan/2019 01:05:35] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[18/Jan/2019 01:05:35] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[18/Jan/2019 01:05:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[18/Jan/2019 01:05:35] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[18/Jan/2019 01:05:35] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[18/Jan/2019 01:05:35] "GET /favicon.ico HTTP/1.1" 404 2603
+[18/Jan/2019 01:05:35] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[22/Jan/2019 20:51:36] "GET / HTTP/1.1" 200 22058
+[22/Jan/2019 20:51:36] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[22/Jan/2019 20:51:36] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[22/Jan/2019 20:51:36] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[22/Jan/2019 20:51:36] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[22/Jan/2019 20:51:36] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[22/Jan/2019 20:51:36] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[22/Jan/2019 20:51:36] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[22/Jan/2019 20:51:36] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[22/Jan/2019 20:51:36] "GET /favicon.ico HTTP/1.1" 404 2603
+[22/Jan/2019 20:51:36] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[22/Jan/2019 20:52:15] "POST / HTTP/1.1" 200 21992
+[22/Jan/2019 20:52:15] "GET /favicon.ico HTTP/1.1" 404 2603
+[22/Jan/2019 20:53:18] "POST / HTTP/1.1" 200 42366191
+[22/Jan/2019 21:00:12] "POST /single/ HTTP/1.1" 200 62770
+- Broken pipe from ('10.10.115.7', 54429)
+[22/Jan/2019 21:00:30] "POST /single/ HTTP/1.1" 200 62770
+- Broken pipe from ('10.10.115.7', 54430)
+[22/Jan/2019 21:00:38] "POST /single/ HTTP/1.1" 200 62770
+- Broken pipe from ('10.10.115.7', 54431)
+[22/Jan/2019 21:00:40] "POST /single/ HTTP/1.1" 200 62770
+- Broken pipe from ('10.10.115.7', 54432)
+[22/Jan/2019 21:00:43] "POST /single/ HTTP/1.1" 200 62770
+- Broken pipe from ('10.10.115.7', 54439)
+[22/Jan/2019 21:00:44] "POST /single/ HTTP/1.1" 200 62770
+[22/Jan/2019 21:00:45] "POST /single/ HTTP/1.1" 200 62770
+[22/Jan/2019 21:10:26] "POST / HTTP/1.1" 200 42366191
+[22/Jan/2019 23:11:26] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[22/Jan/2019 23:11:26] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[22/Jan/2019 23:11:29] "POST / HTTP/1.1" 200 42366191
+[22/Jan/2019 23:40:20] "POST /single/ HTTP/1.1" 200 62770
+[22/Jan/2019 23:44:01] "GET / HTTP/1.1" 200 22058
+[22/Jan/2019 23:44:01] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[22/Jan/2019 23:44:01] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[22/Jan/2019 23:44:01] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[22/Jan/2019 23:44:01] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[22/Jan/2019 23:44:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[22/Jan/2019 23:44:01] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[22/Jan/2019 23:44:01] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[22/Jan/2019 23:44:01] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[22/Jan/2019 23:44:02] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[22/Jan/2019 23:44:02] "GET /favicon.ico HTTP/1.1" 404 2603
+[22/Jan/2019 23:48:59] "GET / HTTP/1.1" 200 22058
+[22/Jan/2019 23:49:00] "POST / HTTP/1.1" 200 59195648
+- Broken pipe from ('10.10.115.17', 65050)
+[22/Jan/2019 23:49:05] "GET / HTTP/1.1" 200 22058
+[22/Jan/2019 23:52:39] "GET /favicon.ico HTTP/1.1" 404 2603
+[22/Jan/2019 23:52:39] "GET / HTTP/1.1" 200 22058
+[22/Jan/2019 23:52:39] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[22/Jan/2019 23:52:39] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[22/Jan/2019 23:52:39] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[22/Jan/2019 23:52:39] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[22/Jan/2019 23:52:39] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[22/Jan/2019 23:52:40] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[22/Jan/2019 23:52:40] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[22/Jan/2019 23:52:40] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[22/Jan/2019 23:52:40] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[22/Jan/2019 23:54:20] "POST / HTTP/1.1" 200 42366191
+[22/Jan/2019 23:56:35] "POST / HTTP/1.1" 200 42366191
+[22/Jan/2019 23:59:38] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[22/Jan/2019 23:59:38] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[23/Jan/2019 00:32:46] "GET / HTTP/1.1" 200 22058
+[23/Jan/2019 00:33:41] "POST / HTTP/1.1" 200 42366191
+[23/Jan/2019 00:36:56] "POST / HTTP/1.1" 200 42366189
+[23/Jan/2019 00:39:28] "POST /single/ HTTP/1.1" 200 62810
+[23/Jan/2019 00:40:10] "GET / HTTP/1.1" 200 22056
+[23/Jan/2019 00:40:30] "POST / HTTP/1.1" 200 318133
+[23/Jan/2019 00:40:38] "POST /single/ HTTP/1.1" 200 32693
+[23/Jan/2019 01:02:03] "POST /single/ HTTP/1.1" 200 62810
+[23/Jan/2019 01:02:03] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[23/Jan/2019 01:02:03] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[23/Jan/2019 01:13:27] "POST /single/ HTTP/1.1" 200 32661
+[25/Jan/2019 02:22:55] "GET / HTTP/1.1" 200 22056
+[25/Jan/2019 02:22:55] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[25/Jan/2019 02:22:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[25/Jan/2019 02:22:55] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[25/Jan/2019 02:22:55] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[25/Jan/2019 02:22:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[25/Jan/2019 02:22:55] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[25/Jan/2019 02:22:55] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[25/Jan/2019 02:22:55] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[25/Jan/2019 02:22:57] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[25/Jan/2019 02:22:57] "GET /favicon.ico HTTP/1.1" 404 2603
+[25/Jan/2019 02:26:55] "POST / HTTP/1.1" 200 21945
+[25/Jan/2019 02:27:13] "POST / HTTP/1.1" 200 21972
+[25/Jan/2019 02:48:17] "POST / HTTP/1.1" 200 62245484
+[12/Feb/2019 20:08:03] "GET / HTTP/1.1" 200 22056
+[12/Feb/2019 20:08:03] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[12/Feb/2019 20:08:03] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Feb/2019 20:08:03] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[12/Feb/2019 20:08:04] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[12/Feb/2019 20:08:04] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[12/Feb/2019 20:08:04] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[12/Feb/2019 20:08:04] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[12/Feb/2019 20:08:04] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Feb/2019 20:08:04] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[12/Feb/2019 20:08:05] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Feb/2019 20:08:48] "POST / HTTP/1.1" 200 10251862
+[12/Mar/2019 00:43:35] "GET / HTTP/1.1" 200 22056
+[12/Mar/2019 00:43:35] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[12/Mar/2019 00:43:35] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Mar/2019 00:43:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[12/Mar/2019 00:43:35] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[12/Mar/2019 00:43:35] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[12/Mar/2019 00:43:35] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[12/Mar/2019 00:43:35] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[12/Mar/2019 00:43:35] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Mar/2019 00:43:35] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[12/Mar/2019 00:43:35] "GET /favicon.ico HTTP/1.1" 404 2603
+[19/Mar/2019 20:42:46] "GET / HTTP/1.1" 200 22056
+[19/Mar/2019 20:42:46] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[19/Mar/2019 20:42:46] "GET /favicon.ico HTTP/1.1" 404 2603
+[19/Mar/2019 20:42:56] "GET / HTTP/1.1" 200 22056
+[19/Mar/2019 20:43:19] "GET / HTTP/1.1" 200 22056
+[19/Mar/2019 20:43:31] "GET / HTTP/1.1" 200 22056
+[19/Mar/2019 20:44:31] "GET / HTTP/1.1" 200 22056
+[15/Apr/2019 03:25:14] "GET /favicon.ico HTTP/1.1" 404 2603
+[15/Apr/2019 03:25:14] "GET / HTTP/1.1" 200 22056
+[15/Apr/2019 03:25:15] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[15/Apr/2019 03:25:15] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[15/Apr/2019 03:25:15] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[15/Apr/2019 03:25:15] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[15/Apr/2019 03:25:15] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[15/Apr/2019 03:25:15] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[15/Apr/2019 03:25:15] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[15/Apr/2019 03:25:15] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[15/Apr/2019 03:25:15] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[15/Apr/2019 03:49:03] "GET /favicon.ico HTTP/1.1" 404 2603
+[22/Apr/2019 20:10:50] "GET /favicon.ico HTTP/1.1" 404 2603
+[23/Apr/2019 22:30:00] "GET / HTTP/1.1" 200 22056
+[23/Apr/2019 22:30:01] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[23/Apr/2019 22:30:01] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[23/Apr/2019 22:30:01] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[23/Apr/2019 22:30:01] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[23/Apr/2019 22:30:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[23/Apr/2019 22:30:01] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[23/Apr/2019 22:30:01] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[23/Apr/2019 22:30:01] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[23/Apr/2019 22:30:04] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[23/Apr/2019 22:30:05] "GET /favicon.ico HTTP/1.1" 404 2603
+[03/Jun/2019 21:13:34] "GET / HTTP/1.1" 200 22056
+[03/Jun/2019 21:13:35] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[03/Jun/2019 21:13:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[03/Jun/2019 21:13:35] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[03/Jun/2019 21:13:35] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[03/Jun/2019 21:13:35] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[03/Jun/2019 21:13:35] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[03/Jun/2019 21:13:35] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[03/Jun/2019 21:13:35] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[03/Jun/2019 21:13:35] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[03/Jun/2019 21:13:35] "GET /favicon.ico HTTP/1.1" 404 2603
+[03/Jun/2019 21:17:35] "POST / HTTP/1.1" 200 22581999
+[03/Jun/2019 21:19:35] "POST / HTTP/1.1" 200 1680750
+[03/Jun/2019 22:05:20] "POST / HTTP/1.1" 200 22522133
+Traceback (most recent call last):
+  File "/usr/local/python2/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/local/python2/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/local/python2/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/local/python2/lib/python2.7/socket.py", line 328, in write
+    self.flush()
+  File "/usr/local/python2/lib/python2.7/socket.py", line 307, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[03/Jun/2019 22:05:20] "POST / HTTP/1.1" 500 59
+- Broken pipe from ('10.10.52.93', 59834)
+[10/Jun/2019 07:18:04] "GET /favicon.ico HTTP/1.1" 404 2603
+[24/Jun/2019 21:57:06] "GET / HTTP/1.1" 200 22056
+[24/Jun/2019 21:57:06] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[24/Jun/2019 21:57:06] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[24/Jun/2019 21:57:06] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[24/Jun/2019 21:57:07] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[24/Jun/2019 21:57:07] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[24/Jun/2019 21:57:07] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[24/Jun/2019 21:57:07] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[24/Jun/2019 21:57:08] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[24/Jun/2019 21:57:08] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[24/Jun/2019 21:57:09] "GET /favicon.ico HTTP/1.1" 404 2603
+[25/Jun/2019 01:53:23] "GET / HTTP/1.1" 200 22056
+[25/Jun/2019 01:53:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[25/Jun/2019 01:53:23] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[25/Jun/2019 01:53:23] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[25/Jun/2019 01:53:23] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[25/Jun/2019 01:53:23] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[25/Jun/2019 01:53:23] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[25/Jun/2019 01:53:24] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[25/Jun/2019 01:53:24] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[25/Jun/2019 01:53:24] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[25/Jun/2019 01:53:24] "GET /favicon.ico HTTP/1.1" 404 2603
+[25/Jun/2019 01:54:07] "GET / HTTP/1.1" 200 22056
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 08, 2019 - 02:01:53
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 21, 2019 - 20:23:17
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.1.7:9001/
+Quit the server with CONTROL-C.
+I: 0
+C2: 0
+I: 0
+C2: 0
+S: 2019-05-01
+E: 2019-05-31
+sss: 1556686800
+eee: 1559365199
+C1: 14951
+<type 'list'>
+1107
+I: 13844
+C2: 14951
+S: 2019-05-01
+E: 2019-05-31
+sss: 1556686800
+eee: 1559365199
+C1: 810
+<type 'list'>
+77
+I: 733
+C2: 810
+S: 2019-05-01
+E: 2019-05-31
+sss: 1556686800
+eee: 1559365199
+C1: 8072
+<type 'list'>
+1104
+I: 6968
+C2: 8072
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+[08/Jul/2019 02:04:39] "GET / HTTP/1.1" 200 22056
+[08/Jul/2019 02:04:40] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Jul/2019 02:04:40] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jul/2019 02:04:40] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Jul/2019 02:04:40] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Jul/2019 02:04:40] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jul/2019 02:04:40] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Jul/2019 02:04:40] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Jul/2019 02:04:40] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Jul/2019 02:04:41] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Jul/2019 02:04:41] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Jul/2019 02:04:48] "POST / HTTP/1.1" 200 22026
+[08/Jul/2019 02:05:01] "POST / HTTP/1.1" 200 146655
+[08/Jul/2019 02:40:06] "GET / HTTP/1.1" 200 22056
+[08/Jul/2019 02:40:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jul/2019 02:40:06] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Jul/2019 02:40:06] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Jul/2019 02:40:06] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Jul/2019 02:40:06] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jul/2019 02:40:06] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Jul/2019 02:40:06] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Jul/2019 02:40:06] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Jul/2019 02:40:07] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Jul/2019 02:40:07] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Jul/2019 02:40:25] "GET / HTTP/1.1" 200 22056
+[08/Jul/2019 02:40:25] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jul/2019 02:40:25] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Jul/2019 02:40:25] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Jul/2019 02:40:25] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Jul/2019 02:40:25] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jul/2019 02:40:25] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Jul/2019 02:40:25] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Jul/2019 02:40:25] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Jul/2019 02:40:25] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Jul/2019 02:40:25] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Jul/2019 02:40:34] "POST / HTTP/1.1" 200 22026
+[08/Jul/2019 02:40:41] "POST / HTTP/1.1" 200 22026
+[08/Jul/2019 02:40:43] "POST /xlsStat HTTP/1.1" 200 27
+[08/Jul/2019 02:40:59] "POST / HTTP/1.1" 200 22350
+[08/Jul/2019 02:42:30] "GET / HTTP/1.1" 200 22056
+[08/Jul/2019 02:42:30] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Jul/2019 02:42:30] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jul/2019 02:42:30] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Jul/2019 02:42:30] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Jul/2019 02:42:30] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Jul/2019 02:42:30] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Jul/2019 02:42:30] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jul/2019 02:42:30] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Jul/2019 02:42:30] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Jul/2019 02:42:30] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Jul/2019 02:42:35] "GET / HTTP/1.1" 200 22056
+[08/Jul/2019 02:42:35] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Jul/2019 02:42:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Jul/2019 02:42:35] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Jul/2019 02:42:35] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Jul/2019 02:42:35] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Jul/2019 02:42:35] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Jul/2019 02:42:35] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Jul/2019 02:42:35] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Jul/2019 02:42:36] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Jul/2019 02:42:36] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[12/Jul/2019 01:38:15] "GET / HTTP/1.1" 200 22056
+[12/Jul/2019 01:38:16] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Jul/2019 01:38:38] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[12/Jul/2019 01:38:39] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Jul/2019 01:38:39] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Jul/2019 01:38:43] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[12/Jul/2019 01:38:43] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[12/Jul/2019 01:38:43] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[12/Jul/2019 01:38:43] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Jul/2019 01:38:43] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[12/Jul/2019 01:38:43] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[12/Jul/2019 01:38:43] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[12/Jul/2019 01:38:43] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Jul/2019 01:38:43] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[12/Jul/2019 01:38:43] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Jul/2019 01:38:43] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[12/Jul/2019 01:39:16] "POST / HTTP/1.1" 200 21972
+[12/Jul/2019 01:46:36] "POST / HTTP/1.1" 200 21990
+[12/Jul/2019 01:54:04] "POST / HTTP/1.1" 200 195954213
+[12/Jul/2019 02:40:09] "GET / HTTP/1.1" 200 22056
+[12/Jul/2019 02:40:09] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[12/Jul/2019 02:40:09] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Jul/2019 02:40:09] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[12/Jul/2019 02:40:09] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[12/Jul/2019 02:40:09] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[12/Jul/2019 02:40:09] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[12/Jul/2019 02:40:09] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Jul/2019 02:40:09] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[12/Jul/2019 02:40:09] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Jul/2019 02:40:10] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[19/Jul/2019 01:28:50] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[19/Jul/2019 01:28:50] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[19/Jul/2019 01:28:50] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[19/Jul/2019 01:28:50] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[19/Jul/2019 01:28:50] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[19/Jul/2019 01:28:50] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[19/Jul/2019 01:28:51] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[19/Jul/2019 01:28:51] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[19/Jul/2019 01:28:51] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+Traceback (most recent call last):
+  File "/usr/local/python2/lib/python2.7/SocketServer.py", line 596, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/local/python2/lib/python2.7/SocketServer.py", line 331, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/disk/env/py2env/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 102, in __init__
+    super(WSGIRequestHandler, self).__init__(*args, **kwargs)
+  File "/usr/local/python2/lib/python2.7/SocketServer.py", line 652, in __init__
+    self.handle()
+  File "/disk/env/py2env/lib/python2.7/site-packages/django/core/servers/basehttp.py", line 167, in handle
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/local/python2/lib/python2.7/socket.py", line 480, in readline
+    data = self._sock.recv(self._rbufsize)
+error: [Errno 104] Connection reset by peer
+[19/Jul/2019 01:28:51] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[19/Jul/2019 01:52:00] "GET / HTTP/1.1" 200 22056
+[19/Jul/2019 01:52:01] "GET /favicon.ico HTTP/1.1" 404 2603
+[19/Jul/2019 01:52:37] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[19/Jul/2019 01:52:56] "GET / HTTP/1.1" 200 22056
+[21/Jul/2019 22:18:22] "GET / HTTP/1.1" 200 22056
+[21/Jul/2019 22:18:23] "GET /favicon.ico HTTP/1.1" 404 2603
+[21/Jul/2019 22:18:46] "GET / HTTP/1.1" 200 22056
+[21/Jul/2019 22:18:52] "POST / HTTP/1.1" 200 22026
+[21/Jul/2019 22:19:04] "POST / HTTP/1.1" 200 21990
+[21/Jul/2019 22:19:10] "POST / HTTP/1.1" 200 22008
+[21/Jul/2019 22:19:22] "POST / HTTP/1.1" 200 22071
+[21/Jul/2019 22:19:29] "POST / HTTP/1.1" 200 22089
+[21/Jul/2019 22:19:33] "POST / HTTP/1.1" 200 22350
+[21/Jul/2019 22:19:53] "POST / HTTP/1.1" 200 22116
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 08, 2019 - 02:03:05
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562569486
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562569500
+C1: 3
+<type 'list'>
+3
+I: 0
+C2: 3
+I: 0
+C2: 0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562571633
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562571640
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562571658
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562913554
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562913995
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1562914068
+C1: 9664
+<type 'list'>
+9636
+I: 28
+C2: 9664
+I: 0
+C2: 0
+I: 0
+C2: 0
+----------------------------------------
+Exception happened during processing of request from ('10.10.115.7', 55560)
+----------------------------------------
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765531
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765543
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765549
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765561
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765568
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765572
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765592
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 21, 2019 - 22:22:57
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+[21/Jul/2019 22:23:29] "POST / HTTP/1.1" 200 22116
+[21/Jul/2019 22:23:32] "POST / HTTP/1.1" 200 22116
+[21/Jul/2019 22:23:44] "POST / HTTP/1.1" 200 22035
+[21/Jul/2019 22:25:36] "GET / HTTP/1.1" 200 22056
+[21/Jul/2019 22:25:39] "POST / HTTP/1.1" 200 22026
+[21/Jul/2019 22:26:20] "POST / HTTP/1.1" 200 22026
+[21/Jul/2019 22:26:34] "POST / HTTP/1.1" 200 22026
+[21/Jul/2019 22:34:07] "POST / HTTP/1.1" 200 22026
+[21/Jul/2019 22:34:12] "GET /favicon.ico HTTP/1.1" 404 2603
+[21/Jul/2019 22:34:13] "GET / HTTP/1.1" 200 22056
+[21/Jul/2019 22:34:13] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[21/Jul/2019 22:34:13] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[21/Jul/2019 22:34:13] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[21/Jul/2019 22:34:13] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[21/Jul/2019 22:34:13] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[21/Jul/2019 22:34:13] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[21/Jul/2019 22:34:13] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[21/Jul/2019 22:34:13] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[21/Jul/2019 22:34:14] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[21/Jul/2019 22:34:44] "POST / HTTP/1.1" 200 126915
+[21/Jul/2019 22:34:59] "POST / HTTP/1.1" 200 22071
+[21/Jul/2019 22:35:40] "POST / HTTP/1.1" 200 6662426
+[25/Jul/2019 20:07:00] "GET / HTTP/1.1" 200 22056
+[25/Jul/2019 20:07:01] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[25/Jul/2019 20:07:01] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[25/Jul/2019 20:07:01] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[25/Jul/2019 20:07:01] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[25/Jul/2019 20:07:01] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[25/Jul/2019 20:07:01] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[25/Jul/2019 20:07:01] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[25/Jul/2019 20:07:01] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[25/Jul/2019 20:07:01] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[25/Jul/2019 20:07:02] "GET /favicon.ico HTTP/1.1" 404 2603
+[25/Jul/2019 20:07:28] "POST / HTTP/1.1" 200 21943
+[25/Jul/2019 20:07:36] "POST / HTTP/1.1" 200 21970
+[25/Jul/2019 20:07:39] "POST / HTTP/1.1" 200 22015
+[25/Jul/2019 20:07:43] "POST / HTTP/1.1" 200 22060
+[25/Jul/2019 20:08:50] "POST / HTTP/1.1" 200 22078
+[25/Jul/2019 20:10:51] "GET / HTTP/1.1" 200 22056
+[25/Jul/2019 20:10:59] "POST / HTTP/1.1" 200 107037
+[25/Jul/2019 20:11:02] "POST / HTTP/1.1" 200 108723885
+[25/Jul/2019 20:11:05] "POST / HTTP/1.1" 200 107019
+[25/Jul/2019 20:12:53] "POST / HTTP/1.1" 200 21925
+[25/Jul/2019 20:14:32] "POST / HTTP/1.1" 200 21925
+[25/Jul/2019 20:14:37] "POST / HTTP/1.1" 200 21970
+[25/Jul/2019 20:14:56] "POST / HTTP/1.1" 200 107098
+[25/Jul/2019 20:41:46] "GET / HTTP/1.1" 200 22056
+[25/Jul/2019 20:41:49] "GET /favicon.ico HTTP/1.1" 404 2603
+Performing system checks...
+
+System check identified no issues (0 silenced).
+July 21, 2019 - 22:25:24
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765938
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563765980
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 2019-06-01
+E: 2019-06-21
+sss: 1559365200
+eee: 1561179599
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 2019-06-01
+E: 2019-06-21
+sss: 1559365200
+eee: 1561179599
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563766483
+C1: 2
+<type 'list'>
+2
+I: 0
+C2: 2
+S: 
+E: 
+sss: 21600
+eee: 1563766499
+C1: 0
+<type 'list'>
+0
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1563766520
+C1: 316
+<type 'list'>
+316
+I: 0
+C2: 316
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1564103247
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103256
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103259
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103262
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103329
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103360
+C1: 5521
+<type 'list'>
+5509
+I: 12
+C2: 5521
+I: 0
+C2: 0
+S: 
+E: 
+sss: 21600
+eee: 1564103459
+C1: 1
+<type 'list'>
+1
+I: 0
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103465
+C1: 1
+<type 'list'>
+1
+I: 0
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103573
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103672
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103677
+C1: 1
+<type 'list'>
+0
+I: 1
+C2: 1
+S: 
+E: 
+sss: 21600
+eee: 1564103696
+C1: 1
+<type 'list'>
+1
+I: 0
+C2: 1
+I: 0
+C2: 0
+[26/Jul/2019 10:35:18] "GET / HTTP/1.1" 200 22056
+[26/Jul/2019 10:35:24] "POST / HTTP/1.1" 200 22042
+[26/Jul/2019 10:35:31] "POST / HTTP/1.1" 200 107344
+[26/Jul/2019 10:37:52] "POST / HTTP/1.1" 200 107342
+[29/Jul/2019 11:12:35] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[29/Jul/2019 11:12:36] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[29/Jul/2019 11:12:36] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[29/Jul/2019 11:12:36] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[29/Jul/2019 11:12:36] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[29/Jul/2019 11:12:36] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[29/Jul/2019 11:12:36] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[29/Jul/2019 11:12:36] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[29/Jul/2019 11:12:36] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[29/Jul/2019 11:12:36] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[29/Jul/2019 11:12:59] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[29/Jul/2019 11:12:59] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[29/Jul/2019 11:12:59] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[29/Jul/2019 11:12:59] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[29/Jul/2019 11:12:59] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[29/Jul/2019 11:12:59] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[29/Jul/2019 11:12:59] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[29/Jul/2019 11:12:59] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[29/Jul/2019 11:12:59] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[29/Jul/2019 11:12:59] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[29/Jul/2019 11:13:00] "GET /favicon.ico HTTP/1.1" 404 2603
+[29/Jul/2019 11:13:05] "GET /favicon.ico HTTP/1.1" 404 2603
+[29/Jul/2019 11:13:07] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[29/Jul/2019 11:13:07] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[29/Jul/2019 11:13:07] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[29/Jul/2019 11:13:07] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[29/Jul/2019 11:13:07] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[29/Jul/2019 11:13:07] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[29/Jul/2019 11:13:07] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[29/Jul/2019 11:13:07] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[29/Jul/2019 11:13:07] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[29/Jul/2019 11:13:07] "GET /static/fonts/glyphicons-halflings-regular.eot? HTTP/1.1" 200 20127
+[29/Jul/2019 11:13:07] "GET /favicon.ico HTTP/1.1" 404 2603
+[29/Jul/2019 11:13:34] "GET / HTTP/1.1" 200 22056
+[29/Jul/2019 11:28:37] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[29/Jul/2019 11:31:35] "POST / HTTP/1.1" 200 21925
+[29/Jul/2019 11:31:38] "POST / HTTP/1.1" 200 21925
+[29/Jul/2019 11:31:47] "POST / HTTP/1.1" 200 107337
+[29/Jul/2019 13:20:20] "POST /xlsStat HTTP/1.1" 200 27
+[29/Jul/2019 13:20:27] "POST /xlsStat HTTP/1.1" 200 27
+[29/Jul/2019 13:28:51] "POST / HTTP/1.1" 200 107337
+[29/Jul/2019 14:01:31] "GET /favicon.ico HTTP/1.1" 404 2603
+[29/Jul/2019 14:07:45] "POST / HTTP/1.1" 200 107337
+[29/Jul/2019 14:08:30] "POST / HTTP/1.1" 200 107337
+[29/Jul/2019 14:08:39] "POST / HTTP/1.1" 200 107344
+[29/Jul/2019 14:15:29] "POST / HTTP/1.1" 200 214403452
+[29/Jul/2019 14:24:25] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[29/Jul/2019 14:34:08] "POST / HTTP/1.1" 200 138335622
+[30/Jul/2019 13:10:37] "GET /favicon.ico HTTP/1.1" 404 2603
+[30/Jul/2019 13:50:18] "GET / HTTP/1.1" 200 22056
+[30/Jul/2019 13:50:18] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[30/Jul/2019 13:50:18] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[30/Jul/2019 13:50:18] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[30/Jul/2019 13:50:18] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[30/Jul/2019 13:50:18] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[30/Jul/2019 13:50:18] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[30/Jul/2019 13:50:18] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[30/Jul/2019 13:50:18] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[30/Jul/2019 13:50:19] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[30/Jul/2019 13:50:19] "GET /favicon.ico HTTP/1.1" 404 2603
+[30/Jul/2019 15:28:00] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 22056
+[30/Jul/2019 15:28:01] "GET /favicon.ico HTTP/1.1" 404 2603
+[30/Jul/2019 15:30:31] "POST / HTTP/1.1" 200 107337
+[30/Jul/2019 15:30:55] "POST /xlsStat HTTP/1.1" 200 27
+[30/Jul/2019 15:34:03] "POST / HTTP/1.1" 200 21925
+[30/Jul/2019 15:34:08] "POST / HTTP/1.1" 200 107355
+[30/Jul/2019 15:38:50] "POST / HTTP/1.1" 200 107337
+[30/Jul/2019 15:40:51] "POST / HTTP/1.1" 200 72770412
+- Broken pipe from ('10.10.40.3', 65092)
+[30/Jul/2019 15:45:21] "GET /static/template/template.xlsx HTTP/1.1" 200 15628
+[30/Jul/2019 15:46:14] "POST / HTTP/1.1" 200 21970
+[30/Jul/2019 15:47:29] "POST / HTTP/1.1" 200 107398
+[30/Jul/2019 15:48:15] "POST /single/ HTTP/1.1" 200 32545
+[30/Jul/2019 15:48:50] "POST / HTTP/1.1" 200 107398
+[30/Jul/2019 15:50:12] "POST / HTTP/1.1" 200 4545317
+[30/Jul/2019 15:51:55] "POST /single/ HTTP/1.1" 200 32557
+[30/Jul/2019 15:52:30] "POST /single/ HTTP/1.1" 200 32559
+[30/Jul/2019 15:53:20] "POST /single/ HTTP/1.1" 200 37919
+[30/Jul/2019 15:58:49] "POST /single/ HTTP/1.1" 200 38390
+[30/Jul/2019 16:04:33] "GET / HTTP/1.1" 200 22056
+[30/Jul/2019 16:04:34] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[30/Jul/2019 16:04:34] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[30/Jul/2019 16:04:34] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[30/Jul/2019 16:04:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[30/Jul/2019 16:04:34] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[30/Jul/2019 16:04:34] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[30/Jul/2019 16:04:34] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[30/Jul/2019 16:04:34] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[30/Jul/2019 16:04:34] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[30/Jul/2019 16:04:44] "POST / HTTP/1.1" 200 22026
+[30/Jul/2019 16:04:53] "POST / HTTP/1.1" 200 146576
+[30/Jul/2019 16:05:04] "POST /cartgram/ HTTP/1.1" 200 33778
+[30/Jul/2019 16:39:58] "GET /favicon.ico HTTP/1.1" 404 2603
+[31/Jul/2019 09:40:40] "GET /static/template/template.xlsx HTTP/1.1" 200 15628
+[31/Jul/2019 15:23:50] "GET / HTTP/1.1" 200 22056
+[31/Jul/2019 15:23:50] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[31/Jul/2019 15:23:50] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[31/Jul/2019 15:23:50] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[31/Jul/2019 15:23:50] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[31/Jul/2019 15:23:50] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[31/Jul/2019 15:23:50] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[31/Jul/2019 15:23:50] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[31/Jul/2019 15:23:50] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[31/Jul/2019 15:23:50] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[31/Jul/2019 15:23:51] "GET /favicon.ico HTTP/1.1" 404 2603
+[31/Jul/2019 15:23:54] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[31/Jul/2019 15:23:54] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[31/Jul/2019 15:24:39] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[31/Jul/2019 15:29:52] "POST / HTTP/1.1" 200 58126697
+[01/Aug/2019 08:35:03] "GET /favicon.ico HTTP/1.1" 404 2603
+[01/Aug/2019 09:23:42] "GET /favicon.ico HTTP/1.1" 404 2603
+[01/Aug/2019 11:29:33] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:29:34] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[01/Aug/2019 11:29:34] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[01/Aug/2019 11:29:34] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[01/Aug/2019 11:29:34] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[01/Aug/2019 11:29:34] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[01/Aug/2019 11:29:34] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[01/Aug/2019 11:29:34] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[01/Aug/2019 11:29:34] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[01/Aug/2019 11:29:34] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[01/Aug/2019 11:29:34] "GET /favicon.ico HTTP/1.1" 404 2603
+[01/Aug/2019 11:29:39] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:29:39] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[01/Aug/2019 11:29:42] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:29:42] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:29:49] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:29:50] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:29:51] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:29:51] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:29:57] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:29:57] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:30:30] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:30:31] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:30:31] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:30:32] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:31:55] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:31:55] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[01/Aug/2019 11:31:55] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[01/Aug/2019 11:31:55] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[01/Aug/2019 11:31:55] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[01/Aug/2019 11:31:55] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[01/Aug/2019 11:31:55] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[01/Aug/2019 11:31:55] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[01/Aug/2019 11:31:55] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[01/Aug/2019 11:31:55] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:31:55] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[01/Aug/2019 11:31:56] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[01/Aug/2019 11:31:59] "GET / HTTP/1.1" 200 22056
+[01/Aug/2019 11:31:59] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:41:37] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[01/Aug/2019 11:44:02] "POST / HTTP/1.1" 200 58414578
+[07/Aug/2019 10:04:15] "GET / HTTP/1.1" 200 17650
+[07/Aug/2019 11:53:48] "GET /favicon.ico HTTP/1.1" 404 2603
+[07/Aug/2019 11:55:40] "GET /favicon.ico HTTP/1.1" 404 2603
+[07/Aug/2019 11:56:05] "GET / HTTP/1.1" 200 17650
+[07/Aug/2019 11:57:17] "GET / HTTP/1.1" 200 17650
+[07/Aug/2019 11:57:19] "POST / HTTP/1.1" 200 21738660
+- Broken pipe from ('10.10.115.17', 49485)
+[07/Aug/2019 11:57:21] "POST / HTTP/1.1" 200 17630
+[07/Aug/2019 11:57:31] "POST / HTTP/1.1" 200 17612
+[07/Aug/2019 11:57:37] "POST / HTTP/1.1" 200 61628
+[08/Aug/2019 10:53:56] "GET / HTTP/1.1" 200 17650
+[08/Aug/2019 10:54:01] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[08/Aug/2019 10:54:01] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[08/Aug/2019 15:27:30] "GET / HTTP/1.1" 200 17650
+[08/Aug/2019 15:27:31] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Aug/2019 15:27:37] "GET / HTTP/1.1" 200 17650
+[08/Aug/2019 15:27:37] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[08/Aug/2019 15:27:37] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[08/Aug/2019 15:27:37] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[08/Aug/2019 15:27:38] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[08/Aug/2019 15:27:38] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[08/Aug/2019 15:27:38] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[08/Aug/2019 15:27:38] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[08/Aug/2019 15:27:38] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[08/Aug/2019 15:27:38] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[08/Aug/2019 15:27:50] "POST / HTTP/1.1" 200 61646
+[08/Aug/2019 15:28:12] "POST / HTTP/1.1" 200 48900
+[08/Aug/2019 16:12:34] "GET / HTTP/1.1" 200 17650
+[08/Aug/2019 16:12:35] "GET /favicon.ico HTTP/1.1" 404 2603
+[08/Aug/2019 16:12:50] "POST / HTTP/1.1" 200 2636536
+[08/Aug/2019 16:13:21] "POST / HTTP/1.1" 200 2636630
+[08/Aug/2019 16:15:24] "POST /single/ HTTP/1.1" 200 32480
+[08/Aug/2019 16:15:24] "GET /static/js/ecStat.min.js HTTP/1.1" 200 9971
+[08/Aug/2019 16:15:24] "GET /static/js/dataTool.min.js HTTP/1.1" 200 3726
+[08/Aug/2019 16:15:24] "GET /static/js/china.js HTTP/1.1" 200 62619
+[08/Aug/2019 16:15:24] "GET /static/js/bmap.min.js HTTP/1.1" 200 5209
+[08/Aug/2019 16:15:24] "GET /static/js/simplex.js HTTP/1.1" 200 16686
+[08/Aug/2019 16:15:24] "GET /static/js/world.js HTTP/1.1" 200 147885
+[08/Aug/2019 16:15:24] "GET /static/js/echarts.min.js HTTP/1.1" 200 747390
+[08/Aug/2019 16:15:24] "GET /static/js/echarts-gl.min.js HTTP/1.1" 200 672813
+[08/Aug/2019 16:51:43] "GET /favicon.ico HTTP/1.1" 404 2603
+[09/Aug/2019 09:27:18] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 09:27:18] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 09:27:18] "GET /static/css/bootstrap.min.css.map HTTP/1.1" 200 542194
+[09/Aug/2019 09:27:53] "POST / HTTP/1.1" 200 6214926
+[09/Aug/2019 09:30:58] "POST / HTTP/1.1" 200 6217777
+[09/Aug/2019 09:32:13] "POST /single/ HTTP/1.1" 200 42014
+[09/Aug/2019 10:05:38] "GET /?tdsourcetag=s_pcqq_aiomsg HTTP/1.1" 200 17650
+[09/Aug/2019 10:05:38] "GET /favicon.ico HTTP/1.1" 404 2603
+[09/Aug/2019 10:06:27] "POST / HTTP/1.1" 200 17594
+[09/Aug/2019 10:08:28] "POST / HTTP/1.1" 200 2975236
+[09/Aug/2019 10:41:03] "POST /cartgram/ HTTP/1.1" 200 29587
+[09/Aug/2019 10:41:03] "GET /static/js/ecStat.min.js HTTP/1.1" 200 9971
+[09/Aug/2019 10:41:03] "GET /static/js/china.js HTTP/1.1" 200 62619
+[09/Aug/2019 10:41:03] "GET /static/js/dataTool.min.js HTTP/1.1" 200 3726
+[09/Aug/2019 10:41:03] "GET /static/js/bmap.min.js HTTP/1.1" 200 5209
+[09/Aug/2019 10:41:03] "GET /static/js/simplex.js HTTP/1.1" 200 16686
+[09/Aug/2019 10:41:03] "GET /static/js/world.js HTTP/1.1" 200 147885
+[09/Aug/2019 10:41:04] "GET /static/js/echarts.min.js HTTP/1.1" 200 747390
+[09/Aug/2019 10:41:05] "GET /static/js/echarts-gl.min.js HTTP/1.1" 200 672813
+[09/Aug/2019 10:41:49] "POST /single/ HTTP/1.1" 200 28133
+[09/Aug/2019 10:42:48] "POST /single/ HTTP/1.1" 200 28133
+[09/Aug/2019 10:47:47] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 10:47:49] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 10:48:21] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 10:48:39] "POST / HTTP/1.1" 200 8123668
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 07, 2019 - 10:04:04
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-07 10:04:15
+end1: 2019-08-07 10:04:15
+strat2: 2019-08-07 10:04:15
+end2-1: 2019-08-07 10:04:15
+strat3: 2019-08-07 10:04:15
+end3: 2019-08-07 10:04:15
+strat: 2019-08-07 11:56:05
+end1: 2019-08-07 11:56:05
+strat2: 2019-08-07 11:56:05
+end2-1: 2019-08-07 11:56:05
+strat3: 2019-08-07 11:56:05
+end3: 2019-08-07 11:56:05
+strat: 2019-08-07 11:56:09
+end1: 2019-08-07 11:56:09
+strat2: 2019-08-07 11:56:09
+end2-1: 2019-08-07 11:56:40
+strat3: 2019-08-07 11:56:40
+end3: 2019-08-07 11:56:40
+strat: 2019-08-07 11:57:17
+end1: 2019-08-07 11:57:17
+strat2: 2019-08-07 11:57:17
+end2-1: 2019-08-07 11:57:17
+strat3: 2019-08-07 11:57:17
+end3: 2019-08-07 11:57:17
+strat: 2019-08-07 11:57:21
+end1: 2019-08-07 11:57:21
+strat2: 2019-08-07 11:57:21
+end2-1: 2019-08-07 11:57:21
+strat3: 2019-08-07 11:57:21
+end3: 2019-08-07 11:57:21
+strat: 2019-08-07 11:57:31
+end1: 2019-08-07 11:57:31
+strat2: 2019-08-07 11:57:31
+end2-1: 2019-08-07 11:57:31
+strat3: 2019-08-07 11:57:31
+end3: 2019-08-07 11:57:31
+strat: 2019-08-07 11:57:37
+end1: 2019-08-07 11:57:37
+strat2: 2019-08-07 11:57:37
+end2-1: 2019-08-07 11:57:37
+strat3: 2019-08-07 11:57:37
+end3: 2019-08-07 11:57:37
+strat: 2019-08-08 10:53:56
+end1: 2019-08-08 10:53:56
+strat2: 2019-08-08 10:53:56
+end2-1: 2019-08-08 10:53:56
+strat3: 2019-08-08 10:53:56
+end3: 2019-08-08 10:53:56
+strat: 2019-08-08 15:27:30
+end1: 2019-08-08 15:27:30
+strat2: 2019-08-08 15:27:30
+end2-1: 2019-08-08 15:27:30
+strat3: 2019-08-08 15:27:30
+end3: 2019-08-08 15:27:30
+strat: 2019-08-08 15:27:37
+end1: 2019-08-08 15:27:37
+strat2: 2019-08-08 15:27:37
+end2-1: 2019-08-08 15:27:37
+strat3: 2019-08-08 15:27:37
+end3: 2019-08-08 15:27:37
+strat: 2019-08-08 15:27:49
+end1: 2019-08-08 15:27:49
+strat2: 2019-08-08 15:27:49
+end2-1: 2019-08-08 15:27:50
+strat3: 2019-08-08 15:27:50
+end3: 2019-08-08 15:27:50
+strat: 2019-08-08 15:28:11
+end1: 2019-08-08 15:28:11
+strat2: 2019-08-08 15:28:11
+end2-1: 2019-08-08 15:28:11
+strat3: 2019-08-08 15:28:11
+end3: 2019-08-08 15:28:11
+strat: 2019-08-08 16:12:34
+end1: 2019-08-08 16:12:34
+strat2: 2019-08-08 16:12:34
+end2-1: 2019-08-08 16:12:34
+strat3: 2019-08-08 16:12:34
+end3: 2019-08-08 16:12:34
+strat: 2019-08-08 16:12:42
+end1: 2019-08-08 16:12:42
+strat2: 2019-08-08 16:12:42
+end2-1: 2019-08-08 16:12:46
+strat3: 2019-08-08 16:12:46
+end3: 2019-08-08 16:12:46
+strat: 2019-08-08 16:13:14
+end1: 2019-08-08 16:13:14
+strat2: 2019-08-08 16:13:14
+end2-1: 2019-08-08 16:13:17
+strat3: 2019-08-08 16:13:17
+end3: 2019-08-08 16:13:17
+strat: 2019-08-09 09:27:18
+end1: 2019-08-09 09:27:18
+strat2: 2019-08-09 09:27:18
+end2-1: 2019-08-09 09:27:18
+strat3: 2019-08-09 09:27:18
+end3: 2019-08-09 09:27:18
+strat: 2019-08-09 09:27:31
+end1: 2019-08-09 09:27:31
+strat2: 2019-08-09 09:27:31
+end2-1: 2019-08-09 09:27:39
+strat3: 2019-08-09 09:27:39
+end3: 2019-08-09 09:27:39
+strat: 2019-08-09 09:30:32
+end1: 2019-08-09 09:30:32
+strat2: 2019-08-09 09:30:32
+end2-1: 2019-08-09 09:30:40
+strat3: 2019-08-09 09:30:40
+end3: 2019-08-09 09:30:40
+strat: 2019-08-09 10:05:38
+end1: 2019-08-09 10:05:38
+strat2: 2019-08-09 10:05:38
+end2-1: 2019-08-09 10:05:38
+strat3: 2019-08-09 10:05:38
+end3: 2019-08-09 10:05:38
+strat: 2019-08-09 10:06:26
+end1: 2019-08-09 10:06:26
+strat2: 2019-08-09 10:06:26
+end2-1: 2019-08-09 10:06:27
+strat3: 2019-08-09 10:06:27
+end3: 2019-08-09 10:06:27
+strat: 2019-08-09 10:06:40
+end1: 2019-08-09 10:06:40
+strat2: 2019-08-09 10:06:40
+end2-1: 2019-08-09 10:08:20
+strat3: 2019-08-09 10:08:20
+end3: 2019-08-09 10:08:20
+strat: 2019-08-09 10:47:47
+end1: 2019-08-09 10:47:47
+strat2: 2019-08-09 10:47:47
+end2-1: 2019-08-09 10:47:47
+strat3: 2019-08-09 10:47:47
+end3: 2019-08-09 10:47:47
+strat: 2019-08-09 10:48:00
+end1: 2019-08-09 10:48:00
+strat2: 2019-08-09 10:48:00
+end2-1: 2019-08-09 10:48:10
+strat3: 2019-08-09 10:48:10
+end3: 2019-08-09 10:48:10
+strat: 2019-08-09 10:50:50
+end1: 2019-08-09 10:50:50
+strat2: 2019-08-09 10:50:50
+end2-1: 2019-08-[09/Aug/2019 10:51:10] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 10:51:32] "POST / HTTP/1.1" 200 8123715
+[09/Aug/2019 11:20:49] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 11:20:49] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 11:20:55] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 11:20:55] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 11:22:11] "POST / HTTP/1.1" 200 80516111
+- Broken pipe from ('10.10.115.17', 65441)
+[09/Aug/2019 11:25:25] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 11:26:24] "POST / HTTP/1.1" 200 80516111
+[09/Aug/2019 11:27:13] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 11:27:15] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 11:51:39] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 11:51:39] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 11:55:19] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 13:21:51] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 13:21:51] "GET /favicon.ico HTTP/1.1" 404 2603
+[09/Aug/2019 14:22:01] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:22:22] "POST / HTTP/1.1" 200 2059674
+[09/Aug/2019 14:25:19] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:27:45] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:32:05] "POST / HTTP/1.1" 200 29665773
+[09/Aug/2019 14:35:40] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:35:41] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:35:52] "POST / HTTP/1.1" 200 17638
+[09/Aug/2019 14:35:52] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:36:01] "POST / HTTP/1.1" 200 17638
+[09/Aug/2019 14:36:01] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:39:41] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:44:07] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:52:15] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:53:13] "POST / HTTP/1.1" 200 80575997
+- Broken pipe from ('10.10.115.17', 56057)
+[09/Aug/2019 14:53:58] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:54:12] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:54:12] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:54:16] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:54:16] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:54:17] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:54:17] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:54:17] "GET / HTTP/1.1" 200 17650
+[09/Aug/2019 14:54:17] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:54:29] "POST / HTTP/1.1" 200 17545
+[09/Aug/2019 14:54:29] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:55:57] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 14:56:44] "POST / HTTP/1.1" 200 9181577
+[09/Aug/2019 14:58:53] "GET /static/css/bootstrap-datepicker3.css.map HTTP/1.1" 404 1713
+[09/Aug/2019 15:00:21] "POST / HTTP/1.1" 200 17555398
+[09/Aug/2019 15:25:46] "GET / HTTP/1.1" 200 17650
+[12/Aug/2019 10:41:01] "GET / HTTP/1.1" 200 17650
+[12/Aug/2019 10:41:01] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Aug/2019 10:47:46] "POST / HTTP/1.1" 200 17932917
+[12/Aug/2019 10:58:14] "POST /single/ HTTP/1.1" 200 28131
+[12/Aug/2019 10:58:15] "POST / HTTP/1.1" 200 17932917
+- Broken pipe from ('10.10.40.3', 51049)
+[12/Aug/2019 10:59:28] "GET / HTTP/1.1" 200 17650
+[12/Aug/2019 11:00:38] "GET / HTTP/1.1" 200 17650
+[12/Aug/2019 11:00:39] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Aug/2019 11:02:10] "POST / HTTP/1.1" 200 9376684
+[12/Aug/2019 11:02:51] "GET /static/template/template.xlsx HTTP/1.1" 200 15628
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 09, 2019 - 14:21:50
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-09 14:22:01
+end1: 2019-08-09 14:22:01
+strat2: 2019-08-09 14:22:01
+end2-1: 2019-08-09 14:22:01
+strat3: 2019-08-09 14:22:01
+end3: 2019-08-09 14:22:01
+strat: 2019-08-09 14:22:10
+end1: 2019-08-09 14:22:10
+strat2: 2019-08-09 14:22:10
+end2-1: 2019-08-09 14:22:20
+strat3: 2019-08-09 14:22:20
+end3: 2019-08-09 14:22:20
+strat: 2019-08-09 14:25:32
+end1: 2019-08-09 14:25:32
+strat2: 2019-08-09 14:25:32
+end2-1: 2019-08-09 14:27:06
+strat3: 2019-08-09 14:27:06
+end3: 2019-08-09 14:27:06
+strat: 2019-08-09 14:35:40
+end1: 2019-08-09 14:35:40
+strat2: 2019-08-09 14:35:40
+end2-1: 2019-08-09 14:35:40
+strat3: 2019-08-09 14:35:40
+end3: 2019-08-09 14:35:40
+strat: 2019-08-09 14:35:51
+end1: 2019-08-09 14:35:51
+strat2: 2019-08-09 14:35:51
+end2-1: 2019-08-09 14:35:52
+strat3: 2019-08-09 14:35:52
+end3: 2019-08-09 14:35:52
+strat: 2019-08-09 14:36:00
+end1: 2019-08-09 14:36:00
+strat2: 2019-08-09 14:36:00
+end2-1: 2019-08-09 14:36:01
+strat3: 2019-08-09 14:36:01
+end3: 2019-08-09 14:36:01
+strat: 2019-08-09 14:36:06
+end1: 2019-08-09 14:36:06
+strat2: 2019-08-09 14:36:06
+end2-1: 2019-08-09 14:37:43
+strat3: 2019-08-09 14:37:43
+end3: 2019-08-09 14:37:43
+strat: 2019-08-09 14:44:07
+end1: 2019-08-09 14:44:07
+strat2: 2019-08-09 14:44:07
+end2-1: 2019-08-09 14:44:07
+strat3: 2019-08-09 14:44:07
+end3: 2019-08-09 14:44:07
+strat: 2019-08-09 14:52:15
+end1: 2019-08-09 14:52:15
+strat2: 2019-08-09 14:52:15
+end2-1: 2019-08-09 14:52:15
+strat3: 2019-08-09 14:52:15
+end3: 2019-08-09 14:52:15
+strat: 2019-08-09 14:54:12
+end1: 2019-08-09 14:54:12
+strat2: 2019-08-09 14:54:12
+end2-1: 2019-08-09 14:54:12
+strat3: 2019-08-09 14:54:12
+end3: 2019-08-09 14:54:12
+strat: 2019-08-09 14:54:16
+end1: 2019-08-09 14:54:16
+strat2: 2019-08-09 14:54:16
+end2-1: 2019-08-09 14:54:16
+strat3: 2019-08-09 14:54:16
+end3: 2019-08-09 14:54:16
+strat: 2019-08-09 14:54:16
+end1: 2019-08-09 14:54:16
+strat2: 2019-08-09 14:54:16
+end2-1: 2019-08-09 14:54:16
+strat3: 2019-08-09 14:54:16
+end3: 2019-08-09 14:54:16
+strat: 2019-08-09 14:54:17
+end1: 2019-08-09 14:54:17
+strat2: 2019-08-09 14:54:17
+end2-1: 2019-08-09 14:54:17
+strat3: 2019-08-09 14:54:17
+end3: 2019-08-09 14:54:17
+strat: 2019-08-09 14:54:28
+end1: 2019-08-09 14:54:28
+strat2: 2019-08-09 14:54:28
+end2-1: 2019-08-09 14:54:29
+strat3: 2019-08-09 14:54:29
+end3: 2019-08-09 14:54:29
+strat: 2019-08-09 14:54:37
+end1: 2019-08-09 14:54:37
+strat2: 2019-08-09 14:54:37
+end2-1: 2019-08-09 14:55:45
+strat3: 2019-08-09 14:55:45
+end3: 2019-08-09 14:55:45
+strat: 2019-08-09 14:57:25
+end1: 2019-08-09 14:57:25
+strat2: 2019-08-09 14:57:25
+end2-1: 2019-08-09 14:58:30
+strat3: 2019-08-09 14:58:30
+end3: 2019-08-09 14:58:30
+strat: 2019-08-09 15:25:46
+end1: 2019-08-09 15:25:46
+strat2: 2019-08-09 15:25:46
+end2-1: 2019-08-09 15:25:46
+strat3: 2019-08-09 15:25:46
+end3: 2019-08-09 15:25:46
+strat: 2019-08-12 10:41:01
+end1: 2019-08-12 10:41:01
+strat2: 2019-08-12 10:41:01
+end2-1: 2019-08-12 10:41:01
+strat3: 2019-08-12 10:41:01
+end3: 2019-08-12 10:41:01
+strat: 2019-08-12 10:46:02
+end1: 2019-08-12 10:46:02
+strat2: 2019-08-12 10:46:02
+end2-1: 2019-08-12 10:46:57
+strat3: 2019-08-12 10:46:57
+end3: 2019-08-12 10:46:57
+strat: 2019-08-12 10:54:10
+end1: 2019-08-12 10:54:10
+strat2: 2019-08-12 10:54:10
+end2-1: 2019-08-12 10:55:06
+strat3: 2019-08-12 10:55:06
+end3: 2019-08-12 10:55:06
+strat: 2019-08-12 10:59:28
+end1: 2019-08-12 10:59:28
+strat2: 2019-08-12 10:59:28
+end2-1: 2019-08-12 10:59:28
+strat3: 2019-08-12 10:59:28
+end3: 2019-08-12 10:59:28
+strat: 2019-08-12 11:00:38
+end1: 2019-08-12 11:00:38
+strat2: 2019-08-12 11:00:38
+end2-1: 2019-08-12 11:00:38
+strat3: 2019-08-12 11:00:38
+end3: 2019-08-12 11:00:38
+strat: 2019-08-12 11:00:55
+end1: 2019-08-12 11:00:55
+strat2: 2019-08-12 11:00:55
+end2-1: 2019-08-12 11:01:50
+strat3: 2019-08-12 11:01:50
+end3: 2019-08-12 11:01:50
+strat: 2019-08-12 11:03:43
+end1: 2019-08-12 11:03:43
+strat2: 2019-08-12 11:03:43
+end2-1: 2019-08-[12/Aug/2019 11:05:16] "POST / HTTP/1.1" 200 17932917
+[12/Aug/2019 15:26:39] "GET / HTTP/1.1" 200 17650
+[12/Aug/2019 15:26:39] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[12/Aug/2019 15:26:39] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[12/Aug/2019 15:26:39] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[12/Aug/2019 15:26:39] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[12/Aug/2019 15:26:39] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[12/Aug/2019 15:26:39] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[12/Aug/2019 15:26:39] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[12/Aug/2019 15:26:39] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[12/Aug/2019 15:26:39] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[12/Aug/2019 15:26:39] "GET /favicon.ico HTTP/1.1" 404 2603
+[12/Aug/2019 15:26:51] "POST / HTTP/1.1" 200 99512
+[12/Aug/2019 16:05:42] "GET / HTTP/1.1" 200 17650
+[13/Aug/2019 09:02:24] "GET / HTTP/1.1" 200 17650
+[13/Aug/2019 09:02:24] "GET /favicon.ico HTTP/1.1" 404 2603
+[13/Aug/2019 09:27:36] "GET / HTTP/1.1" 200 17650
+[13/Aug/2019 09:27:36] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[13/Aug/2019 09:27:36] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[13/Aug/2019 09:27:52] "POST / HTTP/1.1" 200 51819
+[13/Aug/2019 09:32:13] "POST / HTTP/1.1" 200 51819
+[13/Aug/2019 09:32:19] "GET / HTTP/1.1" 200 17650
+[16/Aug/2019 13:24:58] "GET / HTTP/1.1" 200 19519
+[16/Aug/2019 13:24:58] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[16/Aug/2019 13:24:58] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[16/Aug/2019 13:24:58] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[16/Aug/2019 13:24:58] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[16/Aug/2019 13:24:58] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[16/Aug/2019 13:24:58] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[16/Aug/2019 13:24:58] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[16/Aug/2019 13:24:58] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[16/Aug/2019 13:24:58] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[16/Aug/2019 13:24:58] "GET /favicon.ico HTTP/1.1" 404 2603
+[16/Aug/2019 13:25:02] "GET / HTTP/1.1" 200 19519
+[16/Aug/2019 13:25:37] "GET / HTTP/1.1" 200 19519
+[16/Aug/2019 13:25:43] "POST / HTTP/1.1" 200 51577
+[16/Aug/2019 13:25:51] "POST / HTTP/1.1" 200 318732
+[19/Aug/2019 09:24:10] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 09:24:10] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[19/Aug/2019 09:24:10] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[19/Aug/2019 15:13:35] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 15:13:36] "GET /favicon.ico HTTP/1.1" 404 2603
+[19/Aug/2019 17:10:14] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 17:10:23] "POST / HTTP/1.1" 200 70663
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 16, 2019 - 12:51:29
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-16 13:24:58
+end1: 2019-08-16 13:24:58
+strat2: 2019-08-16 13:24:58
+end2-1: 2019-08-16 13:24:58
+strat3: 2019-08-16 13:24:58
+end3: 2019-08-16 13:24:58
+strat: 2019-08-16 13:25:02
+end1: 2019-08-16 13:25:02
+strat2: 2019-08-16 13:25:02
+end2-1: 2019-08-16 13:25:02
+strat3: 2019-08-16 13:25:02
+end3: 2019-08-16 13:25:02
+strat: 2019-08-16 13:25:37
+end1: 2019-08-16 13:25:37
+strat2: 2019-08-16 13:25:37
+end2-1: 2019-08-16 13:25:37
+strat3: 2019-08-16 13:25:37
+end3: 2019-08-16 13:25:37
+strat: 2019-08-16 13:25:42
+end1: 2019-08-16 13:25:42
+strat2: 2019-08-16 13:25:42
+end2-1: 2019-08-16 13:25:43
+strat3: 2019-08-16 13:25:43
+end3: 2019-08-16 13:25:43
+strat: 2019-08-16 13:25:49
+end1: 2019-08-16 13:25:49
+strat2: 2019-08-16 13:25:49
+end2-1: 2019-08-16 13:25:50
+strat3: 2019-08-16 13:25:50
+end3: 2019-08-16 13:25:50
+strat: 2019-08-19 09:24:10
+end1: 2019-08-19 09:24:10
+strat2: 2019-08-19 09:24:10
+end2-1: 2019-08-19 09:24:10
+strat3: 2019-08-19 09:24:10
+end3: 2019-08-19 09:24:10
+strat: 2019-08-19 15:13:35
+end1: 2019-08-19 15:13:35
+strat2: 2019-08-19 15:13:35
+end2-1: 2019-08-19 15:13:35
+strat3: 2019-08-19 15:13:35
+end3: 2019-08-19 15:13:35
+strat: 2019-08-19 17:10:14
+end1: 2019-08-19 17:10:14
+strat2: 2019-08-19 17:10:14
+end2-1: 2019-08-19 17:10:14
+strat3: 2019-08-19 17:10:14
+end3: 2019-08-19 17:10:14
+strat: 2019-08-19 17:10:22
+end1: 2019-08-19 17:10:22
+strat2: 2019-08-19 17:10:22
+end2-1: 2019-08-19 17:10:23
+strat3: 2019-08-19 17:10:23
+end3: 2019-08-19 17:10:23
+[19/Aug/2019 17:12:13] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 17:12:19] "POST / HTTP/1.1" 200 75186
+[19/Aug/2019 17:12:39] "POST / HTTP/1.1" 200 51620
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 19, 2019 - 17:12:12
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-19 17:12:13
+end1: 2019-08-19 17:12:13
+strat2: 2019-08-19 17:12:13
+end2-1: 2019-08-19 17:12:13
+strat3: 2019-08-19 17:12:13
+end3: 2019-08-19 17:12:13
+strat: 2019-08-19 17:12:18
+end1: 2019-08-19 17:12:18
+strat2: 2019-08-19 17:12:18
+end2-1: 2019-08-19 17:12:19
+strat3: 2019-08-19 17:12:19
+end3: 2019-08-19 17:12:19
+strat: 2019-08-19 17:12:39
+end1: 2019-08-19 17:12:39
+strat2: 2019-08-19 17:12:39
+end2-1: 2019-08-19 17:12:39
+strat3: 2019-08-19 17:12:39
+end3: 2019-08-19 17:12:39
+[19/Aug/2019 17:12:55] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 17:13:18] "GET / HTTP/1.1" 200 19519
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 19, 2019 - 17:12:55
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-19 17:12:55
+end1: 2019-08-19 17:12:55
+strat2: 2019-08-19 17:12:55
+end2-1: 2019-08-19 17:12:55
+strat3: 2019-08-19 17:12:55
+end3: 2019-08-19 17:12:55
+strat: 2019-08-19 17:12:59
+end1: 2019-08-19 17:12:59
+strat2: 2019-08-19 17:12:59
+strat: 2019-08-19 17:13:17
+end1: 2019-08-19 17:13:17
+strat2: 2019-08-19 17:13:17
+end2-1: 2019-08-19 17:13:17
+strat3: 2019-08-19 17:13:17
+end3: 2019-08-19 17:13:17
+[19/Aug/2019 17:13:30] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 17:13:35] "POST / HTTP/1.1" 200 51620
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 19, 2019 - 17:13:26
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-19 17:13:30
+end1: 2019-08-19 17:13:30
+strat2: 2019-08-19 17:13:30
+end2-1: 2019-08-19 17:13:30
+strat3: 2019-08-19 17:13:30
+end3: 2019-08-19 17:13:30
+strat: 2019-08-19 17:13:34
+end1: 2019-08-19 17:13:34
+strat2: 2019-08-19 17:13:34
+end2-1: 2019-08-19 17:13:35
+strat3: 2019-08-19 17:13:35
+end3: 2019-08-19 17:13:35
+[19/Aug/2019 17:15:19] "GET / HTTP/1.1" 200 19519
+[19/Aug/2019 17:15:23] "POST / HTTP/1.1" 200 203828
+[20/Aug/2019 08:45:18] "GET /favicon.ico HTTP/1.1" 404 2603
+[20/Aug/2019 09:20:19] "GET /favicon.ico HTTP/1.1" 404 2603
+[20/Aug/2019 10:45:35] "GET / HTTP/1.1" 200 19519
+[20/Aug/2019 10:45:35] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[20/Aug/2019 10:45:35] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[20/Aug/2019 10:49:57] "POST /xlsStat HTTP/1.1" 200 31055
+[20/Aug/2019 10:54:59] "GET /static/template/template.xlsx HTTP/1.1" 200 15628
+[20/Aug/2019 10:58:26] "GET /gettables HTTP/1.1" 200 17725
+[20/Aug/2019 11:14:47] "GET / HTTP/1.1" 200 19519
+[20/Aug/2019 11:14:47] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[20/Aug/2019 11:14:47] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[20/Aug/2019 11:14:47] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[20/Aug/2019 11:14:47] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[20/Aug/2019 11:14:47] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[20/Aug/2019 11:14:47] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[20/Aug/2019 11:14:47] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[20/Aug/2019 11:14:47] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[20/Aug/2019 11:14:47] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[20/Aug/2019 11:14:52] "POST /xlsStat HTTP/1.1" 200 31065
+[20/Aug/2019 11:14:53] "GET /gettables HTTP/1.1" 200 17725
+[20/Aug/2019 11:16:19] "GET / HTTP/1.1" 200 19519
+[20/Aug/2019 11:16:25] "POST /xlsStat HTTP/1.1" 200 30543
+[20/Aug/2019 11:16:25] "GET /static/js/ecStat.min.js HTTP/1.1" 200 9971
+[20/Aug/2019 11:16:25] "GET /static/js/dataTool.min.js HTTP/1.1" 200 3726
+[20/Aug/2019 11:16:25] "GET /static/js/china.js HTTP/1.1" 200 62619
+[20/Aug/2019 11:16:25] "GET /static/js/bmap.min.js HTTP/1.1" 200 5209
+[20/Aug/2019 11:16:25] "GET /static/js/simplex.js HTTP/1.1" 200 16686
+[20/Aug/2019 11:16:25] "GET /static/js/world.js HTTP/1.1" 200 147885
+[20/Aug/2019 11:16:25] "GET /static/js/echarts-gl.min.js HTTP/1.1" 200 672813
+[20/Aug/2019 11:16:25] "GET /static/js/echarts.min.js HTTP/1.1" 200 747390
+[20/Aug/2019 11:16:25] "GET /gettables HTTP/1.1" 200 17725
+[21/Aug/2019 09:12:06] "GET / HTTP/1.1" 200 19519
+[21/Aug/2019 09:12:06] "GET /static/css/bootstrap.min.css HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/css/htmleaf-demo.css HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/js/bootstrap.min.js HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/img/berryTitle.png HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+[21/Aug/2019 09:12:06] "GET /favicon.ico HTTP/1.1" 404 2603
+[21/Aug/2019 09:56:10] "POST / HTTP/1.1" 200 330391
+[21/Aug/2019 14:54:14] "GET / HTTP/1.1" 200 19519
+[21/Aug/2019 14:54:15] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[21/Aug/2019 14:54:15] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[21/Aug/2019 14:54:15] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[21/Aug/2019 14:54:15] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[21/Aug/2019 14:54:15] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[21/Aug/2019 14:54:15] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[21/Aug/2019 14:54:15] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[21/Aug/2019 14:54:15] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[21/Aug/2019 14:54:17] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[21/Aug/2019 14:54:17] "GET /favicon.ico HTTP/1.1" 404 2603
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 19, 2019 - 17:15:18
+Django version 1.8.18, using settings 'WebServer.settings'
+Starting development server at http://10.100.6.7:9001/
+Quit the server with CONTROL-C.
+strat: 2019-08-19 17:15:19
+end1: 2019-08-19 17:15:19
+strat2: 2019-08-19 17:15:19
+end2-1: 2019-08-19 17:15:19
+strat3: 2019-08-19 17:15:19
+end3: 2019-08-19 17:15:19
+strat: 2019-08-19 17:15:23
+end1: 2019-08-19 17:15:23
+strat2: 2019-08-19 17:15:23
+end2-1: 2019-08-19 17:15:23
+strat3: 2019-08-19 17:15:23
+end3: 2019-08-19 17:15:23
+strat: 2019-08-20 10:45:35
+end1: 2019-08-20 10:45:35
+strat2: 2019-08-20 10:45:35
+end2-1: 2019-08-20 10:45:35
+strat3: 2019-08-20 10:45:35
+end3: 2019-08-20 10:45:35
+aaa: template.xlsx
+bbb: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+pp: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+strat: 2019-08-20 11:14:47
+end1: 2019-08-20 11:14:47
+strat2: 2019-08-20 11:14:47
+end2-1: 2019-08-20 11:14:47
+strat3: 2019-08-20 11:14:47
+end3: 2019-08-20 11:14:47
+aaa: template.xlsx
+bbb: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+pp: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+strat: 2019-08-20 11:16:19
+end1: 2019-08-20 11:16:19
+strat2: 2019-08-20 11:16:19
+end2-1: 2019-08-20 11:16:19
+strat3: 2019-08-20 11:16:19
+end3: 2019-08-20 11:16:19
+aaa: template.xlsx
+bbb: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+pp: /data2/web/jialj/WES_WGS/Script/wes_fast_V1.7/upload/template.xlsx
+strat: 2019-08-21 09:12:06
+end1: 2019-08-21 09:12:06
+strat2: 2019-08-21 09:12:06
+end2-1: 2019-08-21 09:12:06
+strat3: 2019-08-21 09:12:06
+end3: 2019-08-21 09:12:06
+strat: 2019-08-21 09:56:08
+end1: 2019-08-21 09:56:08
+strat2: 2019-08-21 09:56:08
+end2-1: 2019-08-21 09:56:10
+strat3: 2019-08-21 09:56:10
+end3: 2019-08-21 09:56:10
+strat: 2019-08-21 14:54:14
+end1: 2019-08-21 14:54:14
+strat2: 2019-08-21 14:54:14
+end2-1: 2019-08-21 14:54:14
+strat3: 2019-08-21 14:54:14
+end3: 2019-08-21 14:54:14
+[21/Aug/2019 15:27:38] "GET / HTTP/1.1" 200 19519
+[21/Aug/2019 15:27:44] "POST / HTTP/1.1" 200 965318
+[21/Aug/2019 15:28:56] "GET / HTTP/1.1" 200 19519
+[21/Aug/2019 15:29:01] "POST / HTTP/1.1" 200 117510
+[21/Aug/2019 15:47:11] "GET /static/template/template.xlsx HTTP/1.1" 200 15628
+[23/Aug/2019 09:13:59] "GET / HTTP/1.1" 200 19519
+[23/Aug/2019 09:14:00] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[23/Aug/2019 09:14:00] "GET /static/css/htmleaf-demo.css HTTP/1.1" 200 5808
+[23/Aug/2019 09:14:00] "GET /static/css/bootstrap-datepicker3.css HTTP/1.1" 200 22864
+[23/Aug/2019 09:14:00] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[23/Aug/2019 09:14:00] "GET /static/img/berryTitle.png HTTP/1.1" 200 10606
+[23/Aug/2019 09:14:00] "GET /static/js/jquery-2.1.1.min.js HTTP/1.1" 200 84249
+[23/Aug/2019 09:14:00] "GET /static/js/bootstrap-datepicker.min.js HTTP/1.1" 200 33529
+[23/Aug/2019 09:14:00] "GET /static/js/bootstrap-datepicker.zh-CN.min.js HTTP/1.1" 200 581
+[23/Aug/2019 09:14:01] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[23/Aug/2019 09:14:02] "GET /favicon.ico HTTP/1.1" 404 2603

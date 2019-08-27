@@ -1,0 +1,30 @@
+1.result.html
+当前正是运行的特效，实现功能：
+在result.1009.html的基础上实现
+1）表格数据上线滚动，表头固定，左右滚动，表头跟随滚动，但是上下表格单元的宽度略微有差异
+	且使用排序功能是，影响列宽
+2.result.1009.html
+升级版本：实现以下功能
+	1.更改样式文件：使用线下文件，线上会报错
+	2.产品类型：增加了“新生儿位点筛查”选项
+	3.字段信息提取
+		包含括号的字段，截取括号内的字段作图，排序
+		画图页面，统计表格中，增加%信息
+		修改置信区间的计算公式
+	4.拼写错误
+		网页中的algin更改为align,但是数据库中的字段名称不改变
+		网页中align_fraction_coveredt_4x更改为align_fraction_covered_4x，数据库中不变
+	5.增加数据检索控制特效
+		不支持空检索
+		不支持进选择指标选项的检索，需配合其他选项使用
+有bug，排序不能用
+3.result.html
+==result.before_fixedtable.html
+注意与result.1010.html中对于第59,60列的排序处理不同，导致esult.1010.html中，基本项无法排序
+表头固定前，成功的例子
+4.result.113fileds_successful_fixedtablehead.html
+在result.1009.html的基础上实现
+1）表格数据上线滚动，表头固定，左右滚动，表头跟随滚动，但是上下表格单元的宽度略微有差异
+	且使用排序功能是，影响列宽
+5.result.27filedssucess.html
+测试使用，27个字段的实现表头固定效果，方法与result.113fileds_successful_fixedtablehead.html一致

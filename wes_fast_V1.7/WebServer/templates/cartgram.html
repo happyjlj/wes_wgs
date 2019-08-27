@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%">
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body style="height: 100%; margin: 0">
+
+       <div id="container_1" style="height: 700px"></div>
+	<div id="container_2" style="height: 700px"></div>
+
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+	
+       <p hidden name="type_1" id="type_1">{{ type_1 }}</p>
+       <p hidden name="type_1" id="list_1">{{ list_1 }}</p>
+	   <p hidden name="type_2" id="type_2">{{ type_2 }}</p>
+       <p hidden name="type_2" id="list_2">{{ list_2 }}</p>
+       <p hidden name="dataBus_Code" id="dataBus_Code">{{ dataBus_Code }}</p>
+   </body>
+   <script type="text/javascript">
+		var dom = document.getElementById("container_1");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		var url=window.document.URL + "?type=" + document.getElementById("type_1").innerHTML + "&list=" + document.getElementById("list_1").innerHTML;
+        //alert(document.getElementById("dataBus_Code").innerHTML);
+		s=url.split("=")[2].split(",");
+		var list=new Array()
+		for (i=0;i<s.length-1 ;i++ ) 
+		{ 
+			document.write(s[i]+"<br/>"); //分割后的字符输出 
+			list[i]=s[i]
+		} 
+		//alert(list)
+		var data = echarts.dataTool.prepareBoxplotData([
+			list,
+    
+		]);
+	
+option = {
+    title: [
+        {
+            text: 'Michelson-Morley Experiment',
+            left: 'center',
+        },
+        {
+            text: 'upper: Q3 + 1.5 * IRQ \nlower: Q1 - 1.5 * IRQ',
+            borderColor: '#999',
+            borderWidth: 1,
+            textStyle: {
+                fontSize: 14
+            },
+            left: '10%',
+            top: '90%'
+        }
+    ],
+    tooltip: {
+        trigger: 'item',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '10%',
+        right: '10%',
+        bottom: '15%'
+    },
+    xAxis: {
+        type: 'category',
+        data: data.axisData,
+        boundaryGap: true,
+        nameGap: 30,
+        splitArea: {
+            show: false
+        },
+        axisLabel: {
+            formatter: 'expr {value}'
+        },
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+        type: 'value',
+        name: 'km/s minus 299,000',
+        splitArea: {
+            show: true
+        }
+    },
+    series: [
+        {
+            name: 'boxplot',
+            type: 'boxplot',
+            data: data.boxData,
+            tooltip: {
+                formatter: function (param) {
+                    return [
+                        'Experiment ' + param.name + ': ',
+                        'upper: ' + param.data[5],
+                        'Q3: ' + param.data[4],
+                        'median: ' + param.data[3],
+                        'Q1: ' + param.data[2],
+                        'lower: ' + param.data[1]
+                    ].join('<br/>')
+                }
+            }
+        },
+        {
+            name: 'outlier',
+            type: 'scatter',
+            data: data.outliers
+        }
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+
+
+
+<script type="text/javascript">
+		var dom = document.getElementById("container_2");
+		var myChart = echarts.init(dom);
+		var app = {};
+		option = null;
+		var url=window.document.URL + "?type=" + document.getElementById("type_2").innerHTML + "&list=" + document.getElementById("list_2").innerHTML;
+		s=url.split("=")[2].split(",");
+		var list=new Array()
+		for (i=0;i<s.length-1 ;i++ ) 
+		{ 
+			document.write(s[i]+"<br/>"); //分割后的字符输出 
+			list[i]=s[i]
+		} 
+		//alert(list)
+		var data = echarts.dataTool.prepareBoxplotData([
+			list,
+    
+		]);
+	
+option = {
+    title: [
+        {
+            text: 'Michelson-Morley Experiment',
+            left: 'center',
+        },
+        {
+            text: 'upper: Q3 + 1.5 * IRQ \nlower: Q1 - 1.5 * IRQ',
+            borderColor: '#999',
+            borderWidth: 1,
+            textStyle: {
+                fontSize: 14
+            },
+            left: '10%',
+            top: '90%'
+        }
+    ],
+    tooltip: {
+        trigger: 'item',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    grid: {
+        left: '10%',
+        right: '10%',
+        bottom: '15%'
+    },
+    xAxis: {
+        type: 'category',
+        data: data.axisData,
+        boundaryGap: true,
+        nameGap: 30,
+        splitArea: {
+            show: false
+        },
+        axisLabel: {
+            formatter: 'expr {value}'
+        },
+        splitLine: {
+            show: false
+        }
+    },
+    yAxis: {
+        type: 'value',
+        name: 'km/s minus 299,000',
+        splitArea: {
+            show: true
+        }
+    },
+    series: [
+        {
+            name: 'boxplot',
+            type: 'boxplot',
+            data: data.boxData,
+            tooltip: {
+                formatter: function (param) {
+                    return [
+                        'Experiment ' + param.name + ': ',
+                        'upper: ' + param.data[5],
+                        'Q3: ' + param.data[4],
+                        'median: ' + param.data[3],
+                        'Q1: ' + param.data[2],
+                        'lower: ' + param.data[1]
+                    ].join('<br/>')
+                }
+            }
+        },
+        {
+            name: 'outlier',
+            type: 'scatter',
+            data: data.outliers
+        }
+    ]
+};;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+
+
+
+</html>
